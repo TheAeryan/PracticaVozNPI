@@ -1,0 +1,25 @@
+<<<<Tutorial Voxeo>>>>
+
+> Subir los ficheros de la aplicación
+File,logs and reports > carpeta www
+
+> Crear aplicación
+Aplication Manager
+
+
+<<<<Cómo crear la aplicación>>>>
+
+La aplicación debe ser usable por gente que no sepa cómo funciona.
+QUE CUALQUIER USUARIO LO QUIERA USAR.
+
+Ej.: Si el usuario dice "Ayuda" en vez de responder a una pregunta,
+el usuario debe ayudarle.
+
+> Qué hacer para obtener la máxima nota
+Hacerlo multilingue
+Estrategia de iniciativa mixta (aparte de la dirigida por el sistema)
+Etc.
+Otro plus: que se pueda hacer la interacción tanto por texto como por voz.
+Usar variable oculta $confidence para ver si pedimos que el usuario 
+repita la entrada o no.
+Tapered prompts.
