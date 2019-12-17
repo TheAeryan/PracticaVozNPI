@@ -1,5 +1,7 @@
 <vxml version="2.1" xml:lang="es-ES">
-	<block>
-		<prompt>Documento de entradas.</prompt>
-	</block>
+	<form id="form_entradas">
+		<block>
+			<prompt>Documento de entradas.</prompt>
+		</block>
+	</form>
 </vxml>
