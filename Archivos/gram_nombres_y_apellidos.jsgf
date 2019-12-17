@@ -1,0 +1,7 @@
+#JSGF V1.0;
+grammar gram_nombres_y_apellidos;
+public <nombre_completo> = <nombre> <apellido> <apellido>;
+
+<nombre> = carlos | paula | miguel | pepe | pedro | roberto | maria | marta | fatima;
+
+<apellido> = molina | ramirez | garcia | gonzalez | fernandez | rodriguez | lopez | ruiz | diaz | moreno;

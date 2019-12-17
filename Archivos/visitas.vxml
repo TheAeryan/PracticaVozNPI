@@ -1,7 +1,7 @@
 <vxml version="2.1" xml:lang="es-ES">
 	<form id="form_visitas">
 		<block>
-			<prompt>Documento de visitas.</prompt>
+			<prompt>Informacion sobre las visitas.</prompt>
 		</block>
 	</form>
 </vxml>

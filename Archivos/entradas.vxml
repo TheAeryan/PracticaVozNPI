@@ -1,7 +1,11 @@
 <vxml version="2.1" xml:lang="es-ES">
-	<form id="form_entradas">
-		<block>
-			<prompt>Documento de entradas.</prompt>
-		</block>
-	</form>
+	<menu>
+		<prompt>Elige informacion o comprar. </prompt>
+		<enumerate/>
+			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/info_entradas.vxml">
+			Informacion </choice>
+			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/comprar_entradas.vxml">
+			Comprar </choice>
+		<enumerate/>
+	</menu>
 </vxml>

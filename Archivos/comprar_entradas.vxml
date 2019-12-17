@@ -1,0 +1,16 @@
+<vxml version="2.1" xml:lang="es-ES">
+	<form id="comprar_entradas" scope="dialog">
+		<field name="tipoVisita">
+			<prompt>Cual es el tipo de visita que quieres realizar? </prompt>
+			<grammar src="gram_tipos_visitas.jsgf"/>
+		</field>
+		<field name="numEntradas">
+			<prompt>Cuantas entradas quiere comprar? </prompt>
+			<grammar>una | uno | dos | tres | cuatro | cinco | seis | siete | ocho | nueve | diez</grammar>
+		</field>
+		<field name="nombreyApellidos">
+			<prompt>Diga su nombre y apellidos. </prompt>
+			<grammar src="gram_nombres_y_apellidos.jsgf"/>
+		</field>
+	</form>
+</vxml>
