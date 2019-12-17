@@ -1,0 +1,11 @@
+<vxml version="2.1" xml:lang="es-ES">
+	<menu>
+		<prompt>Elige entradas o visitas. </prompt>
+		<enumerate/>
+			<choice next="entradas.vxml">
+			Entradas </choice>
+			<choice next="visitas.vxml">
+			Visitas </choice>
+		<enumerate/>
+	</menu>
+</vxml>
