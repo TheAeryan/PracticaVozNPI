@@ -23,3 +23,15 @@ Otro plus: que se pueda hacer la interacción tanto por texto como por voz.
 Usar variable oculta $confidence para ver si pedimos que el usuario 
 repita la entrada o no.
 Tapered prompts.
+
+Poner en la ficha técnica los nombres y apellidos que reconoce el sistema, así
+como los números (de entradas).
+
+EL PROFESOR A LA HORA DE CORREGIRLO LLAMARÁ COMO UN USUARIO NORMAL (NO SE MIRARÁ
+LAS PALABRAS QUE PUEDE DECIR Y NO (LO QUE APARECE EN LAS GRAMÁTICAS))
+
+En la ficha técnica hay que poner lo que hace el sistema (sí se la leerá antes
+de usar el sistema)!!! Debemos decir lo bueno que hemos hecho, "vender nuestro
+sistema"
+
+HAY QUE PONER EN LA MEMORIA TÉCNICA EL PIN PARA QUE PUEDA ACCEDER A NUESTRA APLICACIÓN!!!!

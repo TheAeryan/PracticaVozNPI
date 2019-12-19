@@ -1,0 +1,49 @@
+#JSGF V1.0;
+grammar gram_fecha_visita;
+public <fecha_visita> = <dia> <mes>;
+
+<dia> =  uno |
+		 una |
+		 dos |
+		 tres |
+		 cuatro |
+		 cinco |
+		 seis |
+		 siete |
+		 ocho |
+		 nueve |
+		 diez |
+		 once |
+		 doce |
+		 trece |
+		 catorce |
+		 quince |
+		 dieciseis |
+		 diecisiete |
+		 dieciocho |
+		 diecinueve |
+		 veinte |
+		 veintiuno |
+		 veintidos |
+		 veintitres |
+		 veinticuatro |
+		 veinticinco |
+		 veintiseis |
+		 veintisiete |
+		 veintiocho |
+		 veintinueve |
+		 treinta |
+		 treinta y uno ;
+
+<mes> = enero |
+		febrero |
+		marzo |
+		abril |
+		mayo |
+		junio |
+		julio |
+		agosto |
+		septiembre |
+		octubre |
+		noviembre |
+		diciembre ;
