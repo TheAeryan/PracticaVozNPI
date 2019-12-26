@@ -1,0 +1,48 @@
+-------- Archivos del sistema
+
+Inicio
+ - Visitas
+ - Entradas
+    - Comprar_entradas -> Carlos
+    - Info_entradas 
+
+
+-------- Funcionalidades a implementar
+
+> TODA LAS PARTES DEL SISTEMA DEBEN SER USABLES POR GENTE QUE NO SEPA CÓMO FUNCIONA.
+Las funcionalidades asociadas a que el sistema sea usable por todo el mundo deben
+estar en <todos> los archivos que lo necesiten (ej.: si el usuario pide ayuda
+porque no sabe qué tiene que hacer).
+
+- Que si el usuario dice ayuda el sistema lo ayude
+- Estrategia de iniciativa mixta (en algunas partes del sistema, en otras usamos la dirigida
+  por el sistema)
+- Usar la variable oculta $confidence y repetir la pregunta/asegurarse de que hemos entendido
+  correctamente al usuario si no estamos seguros ($confidence es menor a 0.6, por ejemplo)
+- Tapered prompts (ver <nomatch count>)
+- Formularios
+- Menús
+- Reproducir audio (<audio>)
+- Elementos lógicos (<if>, etc.)
+- Controlar nosotros el orden de visita de los campos del formulario (en vez de usar el FIA) (<clear>, <goto>...)
+- Controlar el <bargein> (hacer que el usuario pueda interrumpir al sistema a veces pero otras veces no)
+- <nomatch count> (cuando el usuario no dice una palabra válida X veces)
+- Pulsar números en el teclado del teléfono (<dtmf>)
+- Eventos (<link event>, creo que parecido a <goto>) y <throw event> y <catch> (ver evento <help> para cuando
+  el usuario pide ayuda)
+- Variables (<var name>) y asignación (<assign name>, <clear namelist>)
+- Gramáticas a nivel de formulario (para la estrategida de iniciativa mixta, rellenar campos del formulario
+  con la gramática) ({this.ciudadDestino=$ciudad})
+- Usar la variable oculta $utterance para decir una palabra tal y como la ha dicho el usuario
+- Usar timeout para elegir el tiempo que el usuario tiene para responder
+- <exit/>, <disconnect/>
+- <script>
+- caching="safe" para descargarnos del servidor el elemento y no usar el que tenemos en la caché (usarlo por 
+  ejemplo junto a audio -> <audio caching="safe">)
+- Grabar mensajes del usuario <record>
+
+---- Opcional (seguramente no lo hagamos)
+
+- Hacerlo multilingüe
+- Que se pueda interactuar tanto por texto (teclado) como por voz
+- Que se conecte a una base de datos para hacer la compra de las entradas (<submit>)

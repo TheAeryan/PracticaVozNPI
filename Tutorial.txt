@@ -9,29 +9,36 @@ Aplication Manager
 
 <<<<Cómo crear la aplicación>>>>
 
-La aplicación debe ser usable por gente que no sepa cómo funciona.
-QUE CUALQUIER USUARIO LO QUIERA USAR.
+HAY QUE AÑADIR COMENTARIOS
+
+HAY QUE PONER EN LA MEMORIA TÉCNICA EL PIN PARA QUE PUEDA ACCEDER A NUESTRA APLICACIÓN!!!!
+
+>>>La aplicación debe ser usable por gente que no sepa cómo funciona.
+>>>QUE CUALQUIER USUARIO LO QUIERA USAR.
 
 Ej.: Si el usuario dice "Ayuda" en vez de responder a una pregunta,
 el usuario debe ayudarle.
 
 > Qué hacer para obtener la máxima nota
-Hacerlo multilingue
+
+NO -> Hacerlo multilingue (es mucho trabajo y no merece la pena)
 Estrategia de iniciativa mixta (aparte de la dirigida por el sistema)
-Etc.
-Otro plus: que se pueda hacer la interacción tanto por texto como por voz.
+Que se pueda hacer la interacción tanto por texto como por voz (mejor no).
 Usar variable oculta $confidence para ver si pedimos que el usuario 
-repita la entrada o no.
+repita la entrada o no (cuando no estamos seguros de si se ha entendido bien lo que ha dicho).
 Tapered prompts.
 
+-------------------------
+
+En el trabajo se valora las funcionalidades usadas de las que hemos vista en clase y
+la complejidad del sistema. Aparte, debe ser usable por cualquier usuario.
+
 Poner en la ficha técnica los nombres y apellidos que reconoce el sistema, así
-como los números (de entradas).
+como los números.
 
 EL PROFESOR A LA HORA DE CORREGIRLO LLAMARÁ COMO UN USUARIO NORMAL (NO SE MIRARÁ
 LAS PALABRAS QUE PUEDE DECIR Y NO (LO QUE APARECE EN LAS GRAMÁTICAS))
 
 En la ficha técnica hay que poner lo que hace el sistema (sí se la leerá antes
-de usar el sistema)!!! Debemos decir lo bueno que hemos hecho, "vender nuestro
-sistema"
-
-HAY QUE PONER EN LA MEMORIA TÉCNICA EL PIN PARA QUE PUEDA ACCEDER A NUESTRA APLICACIÓN!!!!
+de usar el sistema, para saber cómo usarlo)!!! Debemos decir lo bueno que hemos hecho,
+"vender nuestro sistema"
