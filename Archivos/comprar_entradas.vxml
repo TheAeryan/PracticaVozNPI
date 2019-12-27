@@ -1,13 +1,13 @@
 <vxml version="2.1" xml:lang="es-ES">
 	<form id="comprar_entradas" scope="dialog">
 		<field name="tipoVisita">
-			<!--Le doy al usuario más tiempo para responder-->
-			<prompt timeout="15s">Elige el tipo de visita. Ahora mismo, las opciones disponibles son: <enumerate/></prompt>
-			<option value="general"> alhambra general </option>
-			<option value="noct_palacios"> nocturna palacios </option>
-			<option value="jard_gen_alc"> jardines generalife y alcazaba </option>
-			<option value="noct_jard_gen"> nocturna jardines y generalife </option>
-			<option value="experiencias"> alhambra experiencias </option>
+			<!--Le doy al usuario tiempo suficiente para que se piense el tipo de visita que quiere.-->
+			<prompt timeout="30s">Elige el tipo de visita. Ahora mismo, las opciones disponibles son: <enumerate/></prompt>
+			<option value="alhambra general"> alhambra general </option>
+			<option value="nocturna palacios"> nocturna palacios </option>
+			<option value="jardines generalife y alcazaba"> jardines generalife y alcazaba </option>
+			<option value="nocturna jardines y generalife"> nocturna jardines y generalife </option>
+			<option value="alhambra experiencias"> alhambra experiencias </option>
 		</field>
 		<field name="diaVisita">
 			<prompt timeout="15s">Para que dia y mes quieres la visita?</prompt>
@@ -22,7 +22,10 @@
 			<grammar src="gram_nombres_y_apellidos.jsgf"/>
 		</field>
 		<filled mode="all">
-			<prompt>Entrada comprada.
+			<prompt>
+				     <!--Reproduzco un sonido de caja registradora.-->
+				     <audio src="https://wav-sounds.com/wp-content/uploads/2017/09/Various-06.wav"> 
+				     Entrada comprada.
 				     Tipo visita <value expr="tipoVisita"/>.
 				     Dia visita <value expr="diaVisita"/>.
 				     Numero de entradas <value expr="numEntradas"/>.
