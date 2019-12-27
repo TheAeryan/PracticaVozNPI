@@ -1,6 +1,5 @@
 <vxml version="2.1" xml:lang="es-ES">
 	<form id="comprar_entradas" scope="dialog">
-		<var name="max_entradas" expr="10"/>
 		<field name="tipoVisita">
 			<!--Le doy al usuario tiempo suficiente para que se piense el tipo de visita que quiere.-->
 			<prompt timeout="30s">Elige el tipo de visita. Ahora mismo, las opciones disponibles son: <enumerate/></prompt>
@@ -15,20 +14,11 @@
 			<grammar src="gram_fecha_visita.jsgf"/>
 		</field>
 		<field name="numEntradas">
-			<prompt timeout="15s">Diga cuantas entradas quiere comprar o introduzca el numero con el teclado, terminado en asterisco.</prompt>
+			<prompt timeout="15s">Diga cuantas entradas quiere o introduzca el numero con el teclado, terminado en asterisco.</prompt>
 			<!--Gramática "normal" para introducir el número con el habla-->
 			<grammar src="gram_numeros.jsgf"/>
 			<!--Gramática dtmf para introducir el número por teclado-->
 			<grammar mode="dtmf" src="gram_numeros_dtmf.jsgf"/>
-			<!--Me aseguro de que no compre más de <max_entradas> entradas-->
-			<filled>
-				<prompt>Num: <value expr="numEntradas"/></prompt>
-				<if cond="20 &gt; max_entradas">
-					<prompt>
-						El numero de entradas es demasiado grande.
-					</prompt>
-				</if>
-			</filled>
 		</field>
 		<field name="nombreyApellidos">
 			<prompt timeout="15s">Diga su nombre y apellidos. </prompt>
