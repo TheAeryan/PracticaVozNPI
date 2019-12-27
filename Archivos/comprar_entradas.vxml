@@ -22,7 +22,7 @@
 
 			<filled>
 				<if cond="numEntradas &gt; 7">
-					<promtp>Demasiadas entradas.</promtp>
+					<prompt>Demasiadas entradas.</prompt>
 				</if>	
 			</filled>
 		</field>
