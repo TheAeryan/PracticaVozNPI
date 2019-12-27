@@ -25,7 +25,7 @@
 			<!--Me aseguro de que no compre más de <max_entradas> entradas-->
 			<filled>
 				<prompt>Num compradas: <value expr="numEntradas"/></prompt>
-				<if cond="numEntradas &gt; max_entradas">
+				<if cond="numEntradas > max_entradas">
 					<prompt>
 						El numero de entradas es demasiado grande.
 					</prompt>
