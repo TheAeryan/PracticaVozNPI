@@ -3,7 +3,7 @@
 	<form id="comprar_entradas" scope="dialog">
 		<field name="tipoVisita">
 			<!--Le doy al usuario más tiempo para responder-->
-			<prompt timeout="15s">Cual es el tipo de visita que quieres?</prompt>
+			<prompt timeout="15s">Cual es el tipo de visita?</prompt>
 			<grammar src="gram_tipos_visitas.jsgf"/>
 		</field>
 		<field name="diaVisita">
