@@ -20,7 +20,7 @@
 			<!--Gramática "normal" para introducir el número con el habla-->
 			<grammar src="gram_numeros_entradas.jsgf"/>
 			<!--Gramática dtmf para introducir el número por teclado-->
-			<grammar src="gram_numeros_entradas_dtmf.jsgf"/>
+			<grammar mode="dtmf" src="gram_numeros_entradas_dtmf.jsgf"/>
 
 			<!--Me aseguro de que no compre más de <max_entradas> entradas-->
 			<filled>
