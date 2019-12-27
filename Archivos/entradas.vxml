@@ -1,11 +1,9 @@
 <vxml version="2.1" xml:lang="es-ES">
 	<menu>
-		<prompt>Elige informacion o comprar. </prompt>
-		<enumerate/>
+		<prompt>Elige una de las siguientes opciones: <enumerate/></prompt>
 			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/info_entradas.vxml">
 			Informacion </choice>
 			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/comprar_entradas.vxml">
 			Comprar </choice>
-		<enumerate/>
 	</menu>
 </vxml>
