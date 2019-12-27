@@ -18,13 +18,13 @@
 			<prompt timeout="15s">Diga cuantas entradas quiere comprar o introduzca el numero con el teclado, terminado en asterisco.</prompt>
 
 			<!--Gramática "normal" para introducir el número con el habla-->
-			<grammar src="gram_numeros.jsgf"/>
+			<grammar src="gram_numeros_entradas.jsgf"/>
 			<!--Gramática dtmf para introducir el número por teclado-->
-			<grammar src="gram_numeros_dtmf.jsgf"/>
+			<grammar src="gram_numeros_entradas_dtmf.jsgf"/>
 
 			<!--Me aseguro de que no compre más de <max_entradas> entradas-->
 			<filled>
-				<prompt>Las entradas: <value expr="numEntradas"/></prompt>
+				<prompt>Numero entradas: <value expr="numEntradas"/></prompt>
 				<!--<if cond="10 &gt; 12"> FUNCIONA!!-->
 				<!--<if cond="numEntradas &gt; 12"> NO FUNCIONA!!-->
 				<!--NO INTERPRETA BIEN LA ENTRADA-->

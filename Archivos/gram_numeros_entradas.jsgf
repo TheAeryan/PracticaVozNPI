@@ -1,0 +1,12 @@
+#JSGF V1.0;
+grammar numero;
+public <numero> =uno |
+				 una |
+				 dos |
+				 tres |
+				 cuatro |
+				 cinco |
+				 seis |
+				 siete |
+				 ocho |
+				 nueve ;
