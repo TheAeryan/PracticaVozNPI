@@ -14,7 +14,10 @@
 			<grammar src="gram_fecha_visita.jsgf"/>
 		</field>
 		<field name="numEntradas">
-			<prompt timeout="15s">Cuantas entradas quiere comprar?</prompt>
+			<prompt timeout="15s">Diga cuantas entradas quiere comprar o introduzca el numero con el teclado, terminado en asterisco.</prompt>
+			<!--Gramática "normal" para introducir el número con el habla-->
+			<grammar src="gram_numeros.jsgf"/>
+			<!--Gramática dtmf para introducir el número por teclado-->
 			<grammar mode="dtmf" src="gram_numeros_dtmf.jsgf"/>
 		</field>
 		<field name="nombreyApellidos">
