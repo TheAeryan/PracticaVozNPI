@@ -21,11 +21,6 @@
 			<grammar src="gram_numeros.jsgf"/>
 			<!--Gramática dtmf para introducir el número por teclado-->
 			<grammar mode="dtmf" src="gram_numeros_dtmf.jsgf"/>
-
-			<!--Me aseguro de que no compre más de <max_entradas> entradas-->
-			<filled>
-				<prompt>Num: <value expr="numEntradas"/></prompt>
-			</filled>
 		</field>
 		<field name="nombreyApellidos">
 			<prompt timeout="15s">Diga su nombre y apellidos. </prompt>
