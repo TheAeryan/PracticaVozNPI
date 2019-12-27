@@ -2,8 +2,8 @@
 	<menu>
 		<prompt>Elige entradas o visitas. </prompt>
 			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/entradas.vxml">
-			Entradas </choice>
+			<grammar>Entradas</grammar> </choice>
 			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/visitas.vxml">
-			Visitas </choice>
+			<grammar>Visitas</grammar> </choice>
 	</menu>
 </vxml>
