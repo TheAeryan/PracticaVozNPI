@@ -43,7 +43,7 @@
 
 			<!--Me aseguro de que no compre más de <max_entradas> entradas-->
 			<filled>
-				<prompt>Num: <value expr="numEntradas"/></prompt>
+				<prompt>Entrada: <value expr="numEntradas"/></prompt>
 				<!--<if cond="10 &gt; 12"> FUNCIONA!!-->
 				<!--<if cond="numEntradas &gt; 12"> NO FUNCIONA!!-->
 				<!--NO INTERPRETA BIEN LA ENTRADA-->
