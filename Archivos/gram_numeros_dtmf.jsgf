@@ -1,6 +1,10 @@
 #JSGF V1.0;
 grammar numero;
-public <numero> = <digito>+ ;
+public <numero> = <una_cifra> | <dos_cifras>;
+
+<una_cifra> = <digito> {this.numEntradas=$digito};
+
+<dos_cifras> = <digito> {this.numEntradas=($digito*10)} <digito> {this.numEntradas=this.numEntradas+$digito};
 
 <digito> = 0 |
            1 |
