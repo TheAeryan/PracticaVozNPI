@@ -7,7 +7,7 @@
 		</prompt>
 	</block>	
 	<menu>
-		<prompt>Elige una de las siguientes opciones: <enumerate/></prompt>
+		<prompt>Elige: <enumerate/></prompt>
 			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/entradas.vxml">
 			Entradas </choice>
 			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/visitas.vxml">
