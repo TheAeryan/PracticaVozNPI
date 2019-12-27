@@ -2,8 +2,12 @@
 	<form id="comprar_entradas" scope="dialog">
 		<field name="tipoVisita">
 			<!--Le doy al usuario más tiempo para responder-->
-			<prompt timeout="15s">Cual es el tipo de visita?</prompt>
-			<grammar src="gram_tipos_visitas.jsgf"/>
+			<prompt timeout="15s">Elige el tipo de visita. Ahora mismo, las opciones disponibles son: <enumerate/></prompt>
+			<option value="general"> alhambra general </option>
+			<option value="noct_palacios"> nocturna palacios </option>
+			<option value="jard_gen_alc"> jardines generalife y alcazaba </option>
+			<option value="noct_jard_gen"> nocturna jardines y generalife </option>
+			<option value="experiencias"> alhambra experiencias </option>
 		</field>
 		<field name="diaVisita">
 			<prompt timeout="15s">Para que dia y mes quieres la visita?</prompt>
