@@ -2,10 +2,9 @@
 	<menu>
 		<prompt>Elige entradas o visitas. </prompt>
 		<enumerate/>
-			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/entradas.vxml">
-			Entradas </choice>
+			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/entradas.vxml"></choice>
 			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/visitas.vxml">
-			Visitas </choice>
+			</choice>
 		<enumerate/>
 	</menu>
 </vxml>
