@@ -2,7 +2,7 @@
 	<!-- TODO: poner mensaje de inicio de la aplicación que explique un poco lo que hace (no tiene que ser muy largo).
 	Este mensaje no puede ser interrumpido. -->
 	<block>
-		<prompt bargein=“false”>
+		<prompt bargein="false">
 			Bienvenido a nuestro sistema de ayuda a la Alhambra.
 		</prompt>
 	</block>	
