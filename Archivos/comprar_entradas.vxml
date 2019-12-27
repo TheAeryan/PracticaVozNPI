@@ -21,6 +21,7 @@
 			<grammar mode="dtmf" src="gram_numeros_dtmf.jsgf"/>
 
 			<filled>
+				<!--SOLO FUNCIONA CON DTMF-->
 				<if cond="numEntradas &gt; 7">
 					<prompt>Demasiadas entradas.</prompt>
 				</if>	
