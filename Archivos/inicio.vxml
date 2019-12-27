@@ -5,7 +5,7 @@
 		<prompt bargein="false">
 			Bienvenido a nuestro sistema de ayuda a la Alhambra.
 		</prompt>
-		<prompt>Elige algo: <enumerate/></prompt>
+		<prompt>Elige una de las siguientes opciones: <enumerate/></prompt>
 			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/entradas.vxml">
 			Entradas </choice>
 			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/visitas.vxml">
