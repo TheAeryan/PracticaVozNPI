@@ -1,10 +1,9 @@
 <vxml version="2.1" xml:lang="es-ES">
 	<menu>
 		<prompt>Elige entradas o visitas. </prompt>
-		<enumerate/>
-			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/entradas.vxml"></choice>
+			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/entradas.vxml">
+			Entradas </choice>
 			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/visitas.vxml">
-			</choice>
-		<enumerate/>
+			Visitas </choice>
 	</menu>
 </vxml>
