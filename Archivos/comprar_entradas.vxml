@@ -2,19 +2,20 @@
 	<!--NO FUNCIONA POR AHORA-->
 	<form id="comprar_entradas" scope="dialog">
 		<field name="tipoVisita">
-			<prompt>Cual es el tipo de visita que quieres realizar?</prompt>
+			<!--Le doy al usuario más tiempo para responder-->
+			<prompt timeout="15s">Cual es el tipo de visita que quieres realizar?</prompt>
 			<grammar src="gram_tipos_visitas.jsgf"/>
 		</field>
 		<field name="diaVisita">
-			<prompt>Para que dia y mes quieres la visita?</prompt>
+			<prompt timeout="15s">Para que dia y mes quieres la visita?</prompt>
 			<grammar src="gram_fecha_visita.jsgf"/>
 		</field>
 		<field name="numEntradas">
-			<prompt>Cuantas entradas quiere comprar?</prompt>
+			<prompt timeout="15s">Cuantas entradas quiere comprar?</prompt>
 			<grammar src="gram_numeros.jsgf"/>
 		</field>
 		<field name="nombreyApellidos">
-			<prompt>Diga su nombre y apellidos. </prompt>
+			<prompt timeout="15s">Diga su nombre y apellidos. </prompt>
 			<grammar src="gram_nombres_y_apellidos.jsgf"/>
 		</field>
 		<filled mode="all">
