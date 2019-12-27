@@ -16,15 +16,13 @@
 		</field>
 		<field name="numEntradas">
 			<prompt timeout="15s">Diga cuantas entradas quiere comprar o introduzca el numero con el teclado, terminado en asterisco.</prompt>
-
 			<!--Gramática "normal" para introducir el número con el habla-->
 			<grammar src="gram_numeros.jsgf"/>
 			<!--Gramática dtmf para introducir el número por teclado-->
 			<grammar mode="dtmf" src="gram_numeros_dtmf.jsgf"/>
-
 			<!--Me aseguro de que no compre más de <max_entradas> entradas-->
 			<filled>
-				<prompt>Numero: <value expr="numEntradas"/></prompt>
+				<prompt>Num: <value expr="numEntradas"/></prompt>
 				<if cond="20 &gt; max_entradas">
 					<prompt>
 						El numero de entradas es demasiado grande.
