@@ -1,6 +1,6 @@
 #JSGF V1.0;
 grammar numero;
-public <numero> = <digito>+ ;
+public <numero> = <digito> ;
 
 <digito> = 0 |
            1 |
