@@ -1,6 +1,6 @@
 <vxml version="2.1" xml:lang="es-ES">
 	<form id="comprar_entradas" scope="dialog">
-		<var name="max_entradas" expr="10"/>
+		<var name="max_entradas" expr="4"/>
 		<field name="tipoVisita">
 			<!--Le doy al usuario tiempo suficiente para que se piense el tipo de visita que quiere.-->
 			<prompt timeout="30s">Elige el tipo de visita. Ahora mismo, las opciones disponibles son: <enumerate/></prompt>
@@ -24,8 +24,8 @@
 
 			<!--Me aseguro de que no compre más de <max_entradas> entradas-->
 			<filled>
-				<prompt>Num: <value expr="numEntradas"/></prompt>
-				<if cond="20 &gt; max_entradas">
+				<prompt>Num compradas: <value expr="numEntradas"/></prompt>
+				<if cond="numEntradas &gt; max_entradas">
 					<prompt>
 						El numero de entradas es demasiado grande.
 					</prompt>
