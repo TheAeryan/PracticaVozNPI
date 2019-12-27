@@ -1,5 +1,5 @@
 #JSGF V1.0;
-grammar gram_fecha_visita;
+grammar fecha_visita;
 public <fecha_visita> = <dia> <mes>;
 
 <dia> =  uno |

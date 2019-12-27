@@ -1,5 +1,5 @@
 #JSGF V1.0;
-grammar gram_nombres_y_apellidos;
+grammar nombre_completo;
 public <nombre_completo> = <nombre> <apellido> <apellido>;
 
 <nombre> = carlos | paula | miguel | pepe | pedro | roberto | maria | marta | fatima;
