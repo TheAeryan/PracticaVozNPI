@@ -1,12 +1,12 @@
 #JSGF V1.0;
 grammar numero;
-public <numero> =uno |
-				 una |
-				 dos |
-				 tres |
-				 cuatro |
-				 cinco |
-				 seis |
-				 siete |
-				 ocho |
-				 nueve ;
+public <numero> =uno {this.numEntradas=1} | 
+				 una {this.numEntradas=1} |
+				 dos {this.numEntradas=2} |
+				 tres {this.numEntradas=3} |
+				 cuatro {this.numEntradas=4} |
+				 cinco {this.numEntradas=5} |
+				 seis {this.numEntradas=6} |
+				 siete {this.numEntradas=7} |
+				 ocho {this.numEntradas=8} |
+				 nueve {this.numEntradas=9} ;
