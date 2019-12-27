@@ -16,9 +16,9 @@
 		<field name="numEntradas">
 			<prompt timeout="15s">Diga cuantas entradas quiere o introduzca un numero de un digito en el teclado.</prompt>
 			<!--Gramática "normal" para introducir el número con el habla-->
-			<grammar src="gram_numeros_dtmf.jsgf"/>
+			<grammar src="gram_numeros.jsgf"/>
 			<!--Gramática dtmf para introducir el número por teclado-->
-			<grammar mode="dtmf" src="gram_numeros_dtmf.jsgf"/>
+			<grammar mode="dtmf" src="gram_numeros.jsgf"/>
 
 			<filled>
 				<!--SOLO FUNCIONA CON DTMF-->
