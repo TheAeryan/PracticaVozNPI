@@ -1,5 +1,4 @@
 <vxml version="2.1" xml:lang="es-ES">
-	<!--NO FUNCIONA POR AHORA-->
 	<form id="comprar_entradas" scope="dialog">
 		<field name="tipoVisita">
 			<!--Le doy al usuario más tiempo para responder-->

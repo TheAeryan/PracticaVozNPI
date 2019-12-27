@@ -1,9 +1,13 @@
 #JSGF V1.0;
 grammar fecha_visita;
-public <fecha_visita> = <dia> <mes>;
+public <fecha_visita> = [<deseo>] [que | que fuera] [para] [el | el dia] <dia> [de | del mes de] <mes>;
+
+<deseo> = quiero | querria | me gustaria;
 
 <dia> =  uno |
 		 una |
+		 primero |
+		 primera |
 		 dos |
 		 tres |
 		 cuatro |
