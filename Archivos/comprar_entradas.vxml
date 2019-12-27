@@ -24,7 +24,7 @@
 		<filled mode="all">
 			<prompt>
 				     <!--Reproduzco un sonido de caja registradora.-->
-				     <audio src="https://wav-sounds.com/wp-content/uploads/2017/09/Various-06.wav"> 
+				     <audio src="https://wav-sounds.com/wp-content/uploads/2017/09/Various-06.wav"/> 
 				     Entrada comprada.
 				     Tipo visita <value expr="tipoVisita"/>.
 				     Dia visita <value expr="diaVisita"/>.
