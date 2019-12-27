@@ -1,9 +1,11 @@
 <vxml version="2.1" xml:lang="es-ES">
 	<!-- TODO: poner mensaje de inicio de la aplicación que explique un poco lo que hace (no tiene que ser muy largo).
 	Este mensaje no puede ser interrumpido. -->
-	<prompt bargein=“false”>
-		Bienvenido a nuestro sistema de ayuda a la Alhambra.
-	</prompt>	
+	<block>
+		<prompt bargein=“false”>
+			Bienvenido a nuestro sistema de ayuda a la Alhambra.
+		</prompt>
+	</block>	
 	<menu>
 		<prompt>Elige una de las siguientes opciones: <enumerate/></prompt>
 			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/entradas.vxml">
