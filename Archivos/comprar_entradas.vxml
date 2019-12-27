@@ -15,7 +15,7 @@
 		</field>
 		<field name="numEntradas">
 			<prompt timeout="15s">Cuantas entradas quiere comprar?</prompt>
-			<grammar src="gram_numeros.jsgf"/>
+			<grammar mode="dtmf" src="gram_numeros_dtmf.jsgf"/>
 		</field>
 		<field name="nombreyApellidos">
 			<prompt timeout="15s">Diga su nombre y apellidos. </prompt>
