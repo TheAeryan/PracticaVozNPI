@@ -8,13 +8,15 @@
 
 	<form id="comprar_entradas" scope="dialog">
 		<!--"confidence" mínima para que un campo se acepte como válido-->
-		<var name="min_conf" expr="0.9"/>
+		<var name="min_conf" expr="0.85"/>
 		<var name="max_entradas" expr="5"/>
 		<!--Var usada en el campo numEntradas-->
 		<var name="primera_vez" expr="true"/>
 		<!--Var usadas en el campo diaVisita-->
 		<var name="dia_visita"/>
 		<var name="mes_visita"/>
+
+		<!--Tipo de entrada-->
 		<field name="tipoVisita">
 			<!--Le doy al usuario tiempo suficiente para que se piense el tipo de visita que quiere.-->
 			<prompt timeout="30s">Elige el tipo de visita. Ahora mismo, las opciones disponibles son: <enumerate/></prompt>
@@ -26,39 +28,48 @@
 
 			<!--Si no estamos seguros de lo que ha dicho el usuario, le volvemos a preguntar-->
 			<filled>
-				<prompt>La confianza es: <value expr="tipoVisita$.confidence"/></prompt>
 				<if cond="tipoVisita$.confidence &lt; min_conf">
 					<clear namelist="tipoVisita"/>
 					<throw event="nomatch"/>
 				</if>
 			</filled>
-
 		</field>
+
+		<!--Fecha de la visita-->
 		<field name="diaVisita">
 			<prompt timeout="15s">Para que dia y mes quieres la visita?</prompt>
 			<grammar src="gram_fecha_visita.jsgf"/>
 
-			<!--Miro si el día es válido para el mes (del año 2020) que ha introducido el usuario (por
-			 ejemplo, febrero solo tiene 29 días).-->
-			 <filled>
-			 	 <!--Febrero (solo 29 días)-->
-				 <if cond="diaVisita.mes == 2">
-				 	<if cond="diaVisita.dia &gt; 29">
-				 		<prompt>Lo sentimos. El mes elegido solo tiene 29 dias.</prompt>
-				 		<!--Se vuelve a pedir el día y el mes-->
-				 		<clear namelist="diaVisita"/>
-				 	</if>
-				 <!--Meses con 30 días-->
-				 <elseif cond="diaVisita.mes == 4 || diaVisita.mes == 6 || diaVisita.mes == 9 || diaVisita.mes == 11"/> 
-				 	<if cond="diaVisita.dia &gt; 30">
-				 		<prompt>Lo sentimos. El mes elegido solo tiene 30 dias.</prompt>
-				 		<!--Se vuelve a pedir el día y el mes-->
-				 		<clear namelist="diaVisita"/>
-				 	</if>
-				 <!--Meses con 31 días: no hago nada-->
-				 </if>
+			<filled>
+			 	<!--Si no estamos seguros de lo que ha dicho el usuario, le volvemos a preguntar-->
+				<if cond="diaVisita$.confidence &lt; min_conf">
+					<clear namelist="diaVisita"/>
+					<throw event="nomatch"/>
+				<else/>
+					<!--Miro si el día es válido para el mes (del año 2020) que ha introducido el usuario (por
+				 	ejemplo, febrero solo tiene 29 días).-->
+
+				 	 <!--Febrero (solo 29 días)-->
+					 <if cond="diaVisita.mes == 2">
+					 	<if cond="diaVisita.dia &gt; 29">
+					 		<prompt>Lo sentimos. El mes elegido solo tiene 29 dias.</prompt>
+					 		<!--Se vuelve a pedir el día y el mes-->
+					 		<clear namelist="diaVisita"/>
+					 	</if>
+					 <!--Meses con 30 días-->
+					 <elseif cond="diaVisita.mes == 4 || diaVisita.mes == 6 || diaVisita.mes == 9 || diaVisita.mes == 11"/> 
+					 	<if cond="diaVisita.dia &gt; 30">
+					 		<prompt>Lo sentimos. El mes elegido solo tiene 30 dias.</prompt>
+					 		<!--Se vuelve a pedir el día y el mes-->
+					 		<clear namelist="diaVisita"/>
+					 	</if>
+					 <!--Meses con 31 días: no hago nada-->
+					 </if>
+				</if>
 			</filled>
 		</field>
+
+		<!--Número de entradas-->
 		<field name="numEntradas">
 			<prompt timeout="15s" cond="primera_vez == true">Diga cuantas entradas quiere comprar o introduzca un numero de un digito en el teclado.</prompt>
 			<prompt timeout="5s" cond="primera_vez == false">Vuelva a introducir el numero de entradas.</prompt>
@@ -68,20 +79,38 @@
 			<grammar mode="dtmf" src="gram_numeros.jsgf"/>
 
 			<filled>
-				<!--<SOLO> FUNCIONA CON NÚMEROS DE UN DÍGITO (SEAN VOZ O DTMF)-->
-				<if cond="numEntradas &gt; max_entradas">
-					<prompt>No puedes comprar mas de <emphasis><value expr="max_entradas"/></emphasis> entradas.</prompt>
-					<!--Vuelvo a pedir el número de entradas-->
+				<!--Si no estamos seguros de lo que ha dicho el usuario, le volvemos a preguntar-->
+				<if cond="numEntradas$.confidence &lt; min_conf">
 					<clear namelist="numEntradas"/>
-					<!--Cambio el prompt (uso tapered prompts)-->
-					<assign name="primera_vez" expr="false"/>
+					<throw event="nomatch"/>
+				<else/>
+					<!--El usuario no puede comprar más de "max_entradas" entradas-->
+					<if cond="numEntradas &gt; max_entradas">
+						<prompt>No puedes comprar mas de <emphasis><value expr="max_entradas"/></emphasis> entradas.</prompt>
+						<!--Vuelvo a pedir el número de entradas-->
+						<clear namelist="numEntradas"/>
+						<!--Cambio el prompt (uso tapered prompts)-->
+						<assign name="primera_vez" expr="false"/>
+					</if>	
 				</if>	
 			</filled>
 		</field>
+
+		<!--Nombre completo del comprador-->
 		<field name="nombreyApellidos">
 			<prompt timeout="15s">Diga su nombre y apellidos. </prompt>
 			<grammar src="gram_nombres_y_apellidos.jsgf"/>
+
+			<!--Si no estamos seguros de lo que ha dicho el usuario, le volvemos a preguntar-->
+			<filled>
+				<if cond="nombreyApellidos$.confidence &lt; min_conf">
+					<clear namelist="nombreyApellidos"/>
+					<throw event="nomatch"/>
+				</if>
+			</filled>
 		</field>
+
+		<!--Todos los campos han sido rellenados-->
 		<filled mode="all">
 			<prompt>
 				     <!--Reproduzco un sonido de caja registradora.-->
