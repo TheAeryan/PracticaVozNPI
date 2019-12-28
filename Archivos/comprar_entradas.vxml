@@ -122,6 +122,7 @@
 			<filled>
 				<if cond="validarDatos == 'si'">
 					<prompt>
+						<!--Reproduzco un sonido de caja registradora.-->
 						<audio src="https://wav-sounds.com/wp-content/uploads/2017/09/Various-06.wav"></audio>
 						La compra ha sido realizada.
 					</prompt>
@@ -140,7 +141,6 @@
 			<!--Le leo los datos registrados al usuario para que vea si son correctos.-->
 			<prompt>
 					  <!--Reproduzco un sonido de caja registradora.-->
-				     <audio src="https://wav-sounds.com/wp-content/uploads/2017/09/Various-06.wav"></audio>
 				     Los datos de la entrada son:
 				     Tipo visita: <value expr="tipoVisita"/>.
 				     Fecha visita: <value expr="diaVisita.dia"/> del <value expr="diaVisita.mes"/>.
