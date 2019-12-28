@@ -1,13 +1,15 @@
 #JSGF V1.0;
 grammar numero;
-public <numero> = <digito> ;
+public <numero> = ([<cordial>] <digito> [entrada | entradas] [<cordial>]) {this.$value=$digito};
 
-<digito> = 1 |
-           2 |
-           3 |
-           4 |
-           5 |
-           6 |
-           7 |
-           8 |
-           9 ;
+<cordial> = por favor | si puede ser | si es tan amable | si no (le | te) importa | si (es | fuera) posible | en caso de ser posible | gracias
+
+<digito> = 1 {this.$value="1"} |
+           2 {this.$value="2"} |
+           3 {this.$value="3"} |
+           4 {this.$value="4"} |
+           5 {this.$value="5"} |
+           6 {this.$value="6"} |
+           7 {this.$value="7"} |
+           8 {this.$value="8"} |
+           9 {this.$value="9"} ;

@@ -76,7 +76,7 @@
 			<!--Gramática "normal" para introducir el número con el habla-->
 			<grammar src="gram_numeros.jsgf"/>
 			<!--Gramática dtmf para introducir el número por teclado-->
-			<grammar mode="dtmf" src="gram_numeros.jsgf"/>
+			<grammar mode="dtmf" src="gram_numeros_dtmf.jsgf"/>
 
 			<filled>
 				<!--Si no estamos seguros de lo que ha dicho el usuario, le volvemos a preguntar-->
