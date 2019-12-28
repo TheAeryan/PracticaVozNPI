@@ -55,7 +55,7 @@
 				     </audio> 
 				     Entrada comprada.
 				     Tipo visita <value expr="tipoVisita"/>.
-				     Fecha visita: dia <value expr="diaVisita.dia"/> mes <value expr="diaVisita.mes"/>.
+				     Fecha visita: <value expr="diaVisita.dia"/> del <value expr="diaVisita.mes"/>.
 				     Numero de entradas <value expr="numEntradas"/>.
 				     Nombre completo <value expr="nombreyApellidos"/>.
 			</prompt>
