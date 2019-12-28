@@ -15,7 +15,7 @@
 			<grammar src="gram_fecha_visita.jsgf"/>
 		</field>
 		<field name="numEntradas">
-			<prompt timeout="15s">Diga cuantas entradas quiere comprar o introduzca un numero de un digito en el teclado.</prompt>
+			<prompt count="1" timeout="15s">Diga cuantas entradas quiere comprar o introduzca un numero de un digito en el teclado.</prompt>
 			<prompt count="2" timeout="5s">Vuelva a introducir el numero de entradas.</prompt>
 			<!--Gramática "normal" para introducir el número con el habla-->
 			<grammar src="gram_numeros.jsgf"/>
