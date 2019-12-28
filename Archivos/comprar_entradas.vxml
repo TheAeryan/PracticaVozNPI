@@ -24,11 +24,13 @@
 			<option value="alhambra experiencias"> alhambra experiencias </option>
 
 			<!--Si no estamos seguros de lo que ha dicho el usuario, le volvemos a preguntar-->
-			<if cond="tipoVisita$.confidence &lt; min_conf">
-				<prompt>Poca confianza.</prompt>
-				<clear namelist="tipoVisita"/>
-				<throw event="nomatch"/>
-			</if>
+			<filled>
+				<prompt>La confianza es: <value expr="tipoVisita$.confidence"/></prompt>
+				<if cond="tipoVisita$.confidence &lt; min_conf">
+					<clear namelist="tipoVisita"/>
+					<throw event="nomatch"/>
+				</if>
+			</filled>
 
 		</field>
 		<field name="diaVisita">
