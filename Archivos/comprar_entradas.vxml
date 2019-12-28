@@ -1,6 +1,8 @@
 <vxml version="2.1" xml:lang="es-ES">
 	<form id="comprar_entradas" scope="dialog">
 		<var name="max_entradas" expr="5"/>
+		<!--Var usada en el campo numEntradas-->
+		<var name="primera_vez" expr="true"/>
 		<field name="tipoVisita">
 			<!--Le doy al usuario tiempo suficiente para que se piense el tipo de visita que quiere.-->
 			<prompt timeout="30s">Elige el tipo de visita. Ahora mismo, las opciones disponibles son: <enumerate/></prompt>
@@ -15,7 +17,6 @@
 			<grammar src="gram_fecha_visita.jsgf"/>
 		</field>
 		<field name="numEntradas">
-			<var name="primera_vez" expr="true"/>
 			<prompt timeout="15s" cond="primera_vez == true">Diga cuantas entradas quiere comprar o introduzca un numero de un digito en el teclado.</prompt>
 			<prompt timeout="5s" cond="primera_vez == false">Vuelva a introducir el numero de entradas.</prompt>
 			<!--Gramática "normal" para introducir el número con el habla-->
