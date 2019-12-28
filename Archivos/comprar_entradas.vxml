@@ -123,7 +123,7 @@
 				<if cond="validarDatos == 'si'">
 					<prompt>Son correctos.</prompt>
 				<else/>
-					<prompt>No son correctos.</prompt>
+					<prompt>No correctos.</prompt>
 				</if>
 			</filled>
 		</field>

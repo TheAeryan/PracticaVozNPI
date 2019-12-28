@@ -1,6 +1,7 @@
 #JSGF V1.0;
 grammar si_no;
-public <si_no> = [<sujeto>] [(creo | diria) que] [<verbo>] (<afirmacion> {this.$value="si"}) | (<negacion> {this.$value="no"}) ;
+
+public <si_no> = ( [<sujeto>] [(creo | diria) que] [<verbo>] (<afirmacion> {this.$value="si"}) | (<negacion> {this.$value="no"}) ) | ( [<sujeto>] [(creo | diria) que]  no  [<verbo>] (<afirmacion> {this.$value="no"}) | (<negacion> {this.$value="si"}) ) ;
 
 <sujeto> = (los datos | la informacion | los valores | los campos) [almacenados | guardados] [de las entradas | de la entrada] ;
 
@@ -8,4 +9,4 @@ public <si_no> = [<sujeto>] [(creo | diria) que] [<verbo>] (<afirmacion> {this.$
 
 <afirmacion> = si | bien | correcto | correctos | perfecto | de acuerdo ;
 
-<negacion> = no | mal | incorrecto | incorrectos | erroneo | erroneos ;           
+<negacion> = no | mal | incorrecto | incorrectos | erroneo | erroneos ;
