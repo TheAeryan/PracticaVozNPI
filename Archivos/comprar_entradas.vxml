@@ -121,9 +121,16 @@
 
 			<filled>
 				<if cond="validarDatos == 'si'">
-					<prompt>Son correctos.</prompt>
+					<prompt>
+						<audio src="https://wav-sounds.com/wp-content/uploads/2017/09/Various-06.wav"></audio>
+						La compra ha sido realizada.
+					</prompt>
+					<!--Termino la llamada-->
+					<disconnect/>
 				<else/>
-					<prompt>No correctos.</prompt>
+					<prompt>Por favor, vuelva a proporcionar los datos de la entrada.</prompt>
+					<!--Borro todos los campos del formulario-->
+					<clear/>
 				</if>
 			</filled>
 		</field>
