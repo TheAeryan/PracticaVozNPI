@@ -3,7 +3,7 @@
    info_entradas.vxml-->
 	<link next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/carlos/Archivos/info_entradas.vxml">
 		<!--Le pongo un peso menor para que no se detecte que el usuario ha pedido ayuda cuando en realidad no lo ha hecho-->
-		<grammar weight="0.25" src="gram_ayuda.jsgf"/>
+		<grammar weight="0.2" src="gram_ayuda.jsgf"/>
 	</link>
 
 	<form id="comprar_entradas" scope="dialog">
