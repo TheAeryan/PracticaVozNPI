@@ -11,6 +11,8 @@
 			<option value="jardines generalife y alcazaba"> jardines generalife y alcazaba </option>
 			<option value="nocturna jardines y generalife"> nocturna jardines y generalife </option>
 			<option value="alhambra experiencias"> alhambra experiencias </option>
+
+			<help>Texto de ayuda.</help>
 		</field>
 		<field name="diaVisita">
 			<prompt timeout="15s">Para que dia y mes quieres la visita?</prompt>
@@ -18,6 +20,9 @@
 		</field>
 		<field name="numEntradas">
 			<prompt timeout="15s" cond="primera_vez == true">Diga cuantas entradas quiere comprar o introduzca un numero de un digito en el teclado.</prompt>
+
+			<!--FUNCIONA-->
+
 			<prompt timeout="5s" cond="primera_vez == false">Vuelva a introducir el numero de entradas.</prompt>
 			<!--Gramática "normal" para introducir el número con el habla-->
 			<grammar src="gram_numeros.jsgf"/>
