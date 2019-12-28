@@ -1,13 +1,13 @@
 #JSGF V1.0;
 grammar fecha_visita;
-public <fecha_visita> = [<deseo>] [que | que fuera] [para] [el | el dia] <dia> [de | del mes de] <mes>;
+public <fecha_visita> = ([<deseo>] [que | que fuera] [para] [el | el dia] <dia> [de | del mes de] <mes>) {this.$value = $mes};
 
 <deseo> = quiero | querria | me gustaria;
 
-<dia> =  uno {1} |
-		 una {1} |
-		 primero {1} |
-		 primera {1} |
+<dia> =  uno {this.$value="1"} |
+		 una {this.$value="1"} |
+		 primero {this.$value="1"} |
+		 primera {this.$value="1"} |
 		 dos |
 		 tres |
 		 cuatro |
@@ -39,8 +39,8 @@ public <fecha_visita> = [<deseo>] [que | que fuera] [para] [el | el dia] <dia> [
 		 treinta |
 		 treinta y uno ;
 
-<mes> = enero {7} |
-		febrero {7} |
+<mes> = enero {this.$value="7"} |
+		febrero {this.$value="7"} |
 		marzo |
 		abril |
 		mayo |
