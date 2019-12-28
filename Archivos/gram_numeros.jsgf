@@ -1,8 +1,8 @@
 #JSGF V1.0;
 grammar numero;
-public <numero> = ([<cordial>] <digito> [entrada | entradas] [<cordial>]) {this.$value=$digito};
+public <numero> = ([<cordial>] <digito> [entrada | entradas] [<cordial>]) {this.$value=$digito} ;
 
-<cordial> = por favor | si puede ser | si es tan amable | si no (le | te) importa | si (es | fuera) posible | en caso de ser posible | gracias
+<cordial> = por favor | si puede ser | si es tan amable | si no (le | te) importa | si (es | fuera) posible | en caso de ser posible | gracias ;
 
 <digito> = 1 {this.$value="1"} |
            2 {this.$value="2"} |
