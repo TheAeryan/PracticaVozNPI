@@ -112,9 +112,20 @@
 			</filled>
 		</field>
 
-		<!--Se activa cuando todos los campos han sido rellenados-->
+		<!--Se activa cuando el resto de campos han sido rellenados y tras haberse
+	    ejecutado <filled>-->
 		<field name="validarDatos">
-			<prompt>Validar datos. </prompt>
+			<prompt timeout="5s">Estos datos son correctos?</prompt>
+
+			<grammar src="gram_si_no"/>
+
+			<filled>
+				<if cond="validarDatos == 'si'">
+					<prompt>Son correctos.</prompt>
+				<else/>
+					<prompt>No son correctos.</prompt>
+				</if>
+			</filled>
 		</field>
 
 		<!--Todos los campos (menos "validarDatos") han sido rellenados-->
@@ -128,7 +139,6 @@
 				     Fecha visita: <value expr="diaVisita.dia"/> del <value expr="diaVisita.mes"/>.
 				     Numero de entradas: <value expr="numEntradas"/>.
 				     Nombre completo: <value expr="nombreyApellidos"/>.
-				     Estos datos son correctos?
 			</prompt>
 		</filled>
 	</form>
