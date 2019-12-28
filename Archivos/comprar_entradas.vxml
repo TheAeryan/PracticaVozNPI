@@ -22,6 +22,7 @@
 			<grammar mode="dtmf" src="gram_numeros.jsgf"/>
 
 			<filled>
+				<!--FUNCIONA CON NÚMEROS DE UN DÍGITO (SEAN VOZ O DTMF)-->
 				<if cond="numEntradas &gt; max_entradas">
 					<prompt>Demasiadas entradas.</prompt>
 				</if>	
