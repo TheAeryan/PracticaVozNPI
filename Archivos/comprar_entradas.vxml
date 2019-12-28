@@ -8,7 +8,7 @@
 
 	<form id="comprar_entradas" scope="dialog">
 		<!--"confidence" mínima para que un campo se acepte como válido-->
-		<var name="min_conf" expr="0.85"/>
+		<var name="min_conf" expr="0.6"/>
 		<var name="max_entradas" expr="5"/>
 		<!--Var usada en el campo numEntradas-->
 		<var name="primera_vez" expr="true"/>
