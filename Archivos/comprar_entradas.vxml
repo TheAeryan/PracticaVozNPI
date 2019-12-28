@@ -35,6 +35,7 @@
 				 		<prompt>Lo sentimos. El dia introducido no es valido para el mes elegido.</prompt>
 				 		<clear namelist="diaVisita"/>
 				 		<throw event="nomatch"/>
+				 		<reprompt/>
 				 	</if>
 				 <!--Meses con 30 días-->
 				 <elseif cond="diaVisita.mes == 4 || diaVisita.mes == 6 || diaVisita.mes == 9 || diaVisita.mes == 11"/> 
@@ -42,6 +43,7 @@
 				 		<prompt>Lo sentimos. El dia introducido no es valido para el mes elegido.</prompt>
 				 		<clear namelist="diaVisita"/>
 				 		<throw event="nomatch"/>
+				 		<reprompt/>
 				 	</if>
 				 <!--Meses con 31 días: no hago nada-->
 				 </if>
