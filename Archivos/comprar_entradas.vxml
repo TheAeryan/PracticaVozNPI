@@ -1,4 +1,10 @@
 <vxml version="2.1" xml:lang="es-ES">
+	<!--Gramática activa en todo el documento para que el usuario pueda pedir ayuda. Se le manda al documento
+   info_entradas.vxml-->
+	<link next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/carlos/Archivos/info_entradas.vxml">
+		<grammar src="gram_ayuda.jsgf"/>
+	</link>
+
 	<form id="comprar_entradas" scope="dialog">
 		<var name="max_entradas" expr="5"/>
 		<!--Var usada en el campo numEntradas-->

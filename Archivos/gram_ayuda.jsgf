@@ -1,0 +1,13 @@
+#JSGF V1.0;
+grammar ayuda;
+public <ayuda> = [<cordial>] 
+		         (ayuda |
+                 ayudame |
+                 no [te | le | lo] entiendo |
+                 no se [que hacer] |
+                 no se [te | le | lo] entiende) ;
+
+<cordial> = por favor |
+            lo siento [pero] |
+            perdona [pero] |
+            perdoname [pero] ;
