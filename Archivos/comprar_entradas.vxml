@@ -2,7 +2,8 @@
 	<!--Gramática activa en todo el documento para que el usuario pueda pedir ayuda. Se le manda al documento
    info_entradas.vxml-->
 	<link next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/carlos/Archivos/info_entradas.vxml">
-		<grammar src="gram_ayuda.jsgf"/>
+		<!--Le pongo un peso menor para que no se detecte que el usuario ha pedido ayuda cuando en realidad no lo ha hecho-->
+		<grammar weight="0.5" src="gram_ayuda.jsgf"/>
 	</link>
 
 	<form id="comprar_entradas" scope="dialog">
