@@ -17,8 +17,6 @@
 			<option value="jardines generalife y alcazaba"> jardines generalife y alcazaba </option>
 			<option value="nocturna jardines y generalife"> nocturna jardines y generalife </option>
 			<option value="alhambra experiencias"> alhambra experiencias </option>
-
-			<help>Texto de ayuda.</help>
 		</field>
 		<field name="diaVisita">
 			<prompt timeout="15s">Para que dia y mes quieres la visita?</prompt>
