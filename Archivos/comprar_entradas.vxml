@@ -15,7 +15,7 @@
 			<grammar src="gram_fecha_visita.jsgf"/>
 		</field>
 		<field name="numEntradas">
-			<prompt timeout="15s">Diga cuantas entradas quiere o introduzca un numero de un digito en el teclado.</prompt>
+			<prompt timeout="15s">Diga cuantas entradas quiere comprar o introduzca un numero de un digito en el teclado.</prompt>
 			<!--Gramática "normal" para introducir el número con el habla-->
 			<grammar src="gram_numeros.jsgf"/>
 			<!--Gramática dtmf para introducir el número por teclado-->
@@ -24,7 +24,10 @@
 			<filled>
 				<!--<SOLO> FUNCIONA CON NÚMEROS DE UN DÍGITO (SEAN VOZ O DTMF)-->
 				<if cond="numEntradas &gt; max_entradas">
-					<prompt>Demasiadas entradas.</prompt>
+					<prompt>No puedes comprar mas de <value expr="max_entradas"/> entradas.</prompt>
+					<!--Vuelvo a pedir el número de entradas-->
+					<clear namelist="numEntradas"/>
+					<prompt>Vuelva a introducir el numero de entradas.</prompt>
 				</if>	
 			</filled>
 		</field>
