@@ -25,6 +25,7 @@
 
 			<!--Si no estamos seguros de lo que ha dicho el usuario, le volvemos a preguntar-->
 			<if cond="tipoVisita$.confidence &lt; min_conf">
+				<prompt>Poca confianza.</prompt>
 				<clear namelist="tipoVisita"/>
 				<throw event="nomatch"/>
 			</if>
