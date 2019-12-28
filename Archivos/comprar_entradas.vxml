@@ -120,6 +120,8 @@
 			<grammar src="gram_si_no.jsgf"/>
 
 			<filled>
+				<prompt>Valor: <value expr="validarDatos"/></prompt>
+
 				<if cond="validarDatos == 'si'">
 					<prompt>Son correctos.</prompt>
 				<else/>
