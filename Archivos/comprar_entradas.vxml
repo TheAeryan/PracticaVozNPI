@@ -26,6 +26,10 @@
 			<prompt count="2" timeout="15s">Por favor, introduzca el dia y el mes.</prompt>
 			<grammar src="gram_fecha_visita.jsgf"/>
 
+			<nomatch>
+         	<reprompt/>
+         </nomatch>
+
 			<!--Miro si el día existe en el mes (del año 2020) que ha introducido el usuario (por
 			 ejemplo, febrero solo tiene 29 días).-->
 			 <filled>
@@ -35,7 +39,6 @@
 				 		<prompt>Lo sentimos. El dia introducido no es valido para el mes elegido.</prompt>
 				 		<clear namelist="diaVisita"/>
 				 		<throw event="nomatch"/>
-				 		<reprompt/>
 				 	</if>
 				 <!--Meses con 30 días-->
 				 <elseif cond="diaVisita.mes == 4 || diaVisita.mes == 6 || diaVisita.mes == 9 || diaVisita.mes == 11"/> 
@@ -43,7 +46,6 @@
 				 		<prompt>Lo sentimos. El dia introducido no es valido para el mes elegido.</prompt>
 				 		<clear namelist="diaVisita"/>
 				 		<throw event="nomatch"/>
-				 		<reprompt/>
 				 	</if>
 				 <!--Meses con 31 días: no hago nada-->
 				 </if>
