@@ -22,23 +22,24 @@
 			<option value="alhambra experiencias"> alhambra experiencias </option>
 		</field>
 		<field name="diaVisita">
-			<prompt count="1" timeout="15s">Para que dia y mes quieres la visita?</prompt>
-			<prompt count="2" timeout="15s">Por favor, introduzca el dia y el mes.</prompt>
+			<prompt timeout="15s">Para que dia y mes quieres la visita?</prompt>
 			<grammar src="gram_fecha_visita.jsgf"/>
 
-			<!--Miro si el día existe en el mes (del año 2020) que ha introducido el usuario (por
+			<!--Miro si el día es válido para el mes (del año 2020) que ha introducido el usuario (por
 			 ejemplo, febrero solo tiene 29 días).-->
 			 <filled>
 			 	 <!--Febrero (solo 29 días)-->
 				 <if cond="diaVisita.mes == 2">
 				 	<if cond="diaVisita.dia &gt; 29">
-				 		<prompt>Lo sentimos. El dia introducido no es valido para el mes elegido.</prompt>
+				 		<prompt>Lo sentimos. El mes elegido solo tiene 29 dias.</prompt>
+				 		<!--Se vuelve a pedir el día y el mes-->
 				 		<clear namelist="diaVisita"/>
 				 	</if>
 				 <!--Meses con 30 días-->
 				 <elseif cond="diaVisita.mes == 4 || diaVisita.mes == 6 || diaVisita.mes == 9 || diaVisita.mes == 11"/> 
 				 	<if cond="diaVisita.dia &gt; 30">
-				 		<prompt>Lo sentimos. El dia introducido no es valido para el mes elegido.</prompt>
+				 		<prompt>Lo sentimos. El mes elegido solo tiene 30 dias.</prompt>
+				 		<!--Se vuelve a pedir el día y el mes-->
 				 		<clear namelist="diaVisita"/>
 				 	</if>
 				 <!--Meses con 31 días: no hago nada-->
