@@ -129,7 +129,7 @@
 					<!--Termino la llamada-->
 					<disconnect/>
 				<else/>
-					<prompt>Por favor, vuelva a proporcionar los datos de la entrada.</prompt>
+					<prompt>Por favor, vuelva a proporcionar los datos.</prompt>
 					<!--Borro todos los campos del formulario-->
 					<clear/>
 				</if>
