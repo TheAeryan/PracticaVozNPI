@@ -4,10 +4,10 @@ public <fecha_visita> = [<deseo>] [que | que fuera] [para] [el | el dia] <dia> [
 
 <deseo> = quiero | querria | me gustaria;
 
-<dia> =  uno |
-		 una |
-		 primero |
-		 primera |
+<dia> =  uno {this.dia_visita=1} |
+		 una {this.dia_visita=1} |
+		 primero {this.dia_visita=1} |
+		 primera {this.dia_visita=1} |
 		 dos |
 		 tres |
 		 cuatro |
@@ -40,7 +40,7 @@ public <fecha_visita> = [<deseo>] [que | que fuera] [para] [el | el dia] <dia> [
 		 treinta y uno ;
 
 <mes> = enero |
-		febrero |
+		febrero {this.mes_visita=2} |
 		marzo |
 		abril |
 		mayo |

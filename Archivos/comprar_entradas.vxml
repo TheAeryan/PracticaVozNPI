@@ -9,6 +9,9 @@
 		<var name="max_entradas" expr="5"/>
 		<!--Var usada en el campo numEntradas-->
 		<var name="primera_vez" expr="true"/>
+		<!--Var usadas en el campo diaVisita-->
+		<var name="dia_visita"/>
+		<var name="mes_visita"/>
 		<field name="tipoVisita">
 			<!--Le doy al usuario tiempo suficiente para que se piense el tipo de visita que quiere.-->
 			<prompt timeout="30s">Elige el tipo de visita. Ahora mismo, las opciones disponibles son: <enumerate/></prompt>
@@ -24,9 +27,6 @@
 		</field>
 		<field name="numEntradas">
 			<prompt timeout="15s" cond="primera_vez == true">Diga cuantas entradas quiere comprar o introduzca un numero de un digito en el teclado.</prompt>
-
-			<!--FUNCIONA-->
-
 			<prompt timeout="5s" cond="primera_vez == false">Vuelva a introducir el numero de entradas.</prompt>
 			<!--Gramática "normal" para introducir el número con el habla-->
 			<grammar src="gram_numeros.jsgf"/>
@@ -55,7 +55,7 @@
 				     </audio> 
 				     Entrada comprada.
 				     Tipo visita <value expr="tipoVisita"/>.
-				     Dia visita <value expr="diaVisita"/>.
+				     Fecha visita <value expr="dia_visita"/> del <value expr="mes_visita"/>.
 				     Numero de entradas <value expr="numEntradas"/>.
 				     Nombre completo <value expr="nombreyApellidos"/>.
 			</prompt>
