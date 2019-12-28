@@ -117,7 +117,7 @@
 		<field name="validarDatos">
 			<prompt timeout="5s">Estos datos son correctos?</prompt>
 
-			<grammar src="gram_si_no"/>
+			<grammar src="gram_si_no.jsgf"/>
 
 			<filled>
 				<if cond="validarDatos == 'si'">
