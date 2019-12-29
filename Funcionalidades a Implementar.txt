@@ -4,7 +4,7 @@ Inicio
  - Visitas
  - Entradas
     - Comprar_entradas -> Carlos
-    - Info_entradas 
+    - Info_entradas
 
 
 -------- Funcionalidades a implementar
@@ -15,34 +15,37 @@ estar en <todos> los archivos que lo necesiten (ej.: si el usuario pide ayuda
 porque no sabe qué tiene que hacer).
 
 - Que si el usuario dice ayuda el sistema lo ayude
-- Estrategia de iniciativa mixta (en algunas partes del sistema, en otras usamos la dirigida
+- [+] Estrategia de iniciativa mixta (en algunas partes del sistema, en otras usamos la dirigida
   por el sistema)
-- Usar la variable oculta $confidence y repetir la pregunta/asegurarse de que hemos entendido
+- [+] Usar la variable oculta $confidence y repetir la pregunta/asegurarse de que hemos entendido
   correctamente al usuario si no estamos seguros ($confidence es menor a 0.6, por ejemplo)
-- Tapered prompts (ver <nomatch count>)
-- Formularios
-- Menús
-- Reproducir audio (<audio>)
-- Elementos lógicos (<if>, etc.)
+- [+] Tapered prompts (ver <nomatch count>)
+- [+] Formularios
+- [+] Menús
+- [+] Reproducir audio (<audio>)
+- [+] Elementos lógicos (<if>, etc.)
 - Controlar nosotros el orden de visita de los campos del formulario (en vez de usar el FIA) (<clear>, <goto>...)
-- Controlar el <bargein> (hacer que el usuario pueda interrumpir al sistema a veces pero otras veces no)
-- <nomatch count> (cuando el usuario no dice una palabra válida X veces)
-- Pulsar números en el teclado del teléfono (<dtmf>)
-- Eventos (<link event>, creo que parecido a <goto>) y <throw event> y <catch> (ver evento <help> para cuando
-  el usuario pide ayuda)
-- Variables (<var name>) y asignación (<assign name>, <clear namelist>)
-- Gramáticas a nivel de formulario (para la estrategida de iniciativa mixta, rellenar campos del formulario
+- [+] Controlar el <bargein> (hacer que el usuario pueda interrumpir al sistema a veces pero otras veces no)
+- [+] <nomatch count> (cuando el usuario no dice una palabra válida X veces)
+- [+] Pulsar números en el teclado del teléfono (<dtmf>)
+- Uso de <throw event> y <catch> (ver evento <help> para cuando el usuario pide ayuda)
+- [+] Uso de <link> para enviar al usuario a la pagina info_entradas.vxml cuando en la pagina comprar_entradas.vxml pide ayuda
+- [+] Variables (<var name>) y asignación (<assign name>, <clear namelist>)
+- [+] Gramáticas a nivel de formulario (para la estrategida de iniciativa mixta, rellenar campos del formulario
   con la gramática) ({this.ciudadDestino=$ciudad})
 - Usar la variable oculta $utterance para decir una palabra tal y como la ha dicho el usuario
-- Usar timeout para elegir el tiempo que el usuario tiene para responder
-- <exit/>, <disconnect/>
+- [+] Usar timeout para elegir el tiempo que el usuario tiene para responder
+- [+] <exit/>, <disconnect/>
 - <script>
-- caching="safe" para descargarnos del servidor el elemento y no usar el que tenemos en la caché (usarlo por 
+- caching="safe" para descargarnos del servidor el elemento y no usar el que tenemos en la caché (usarlo por
   ejemplo junto a audio -> <audio caching="safe">)
 - Grabar mensajes del usuario <record>
+- [+] Uso de <emphasis> en un <prompt>
+- [+] Uso de <option> para rellenar el campo de un formulario.
+- [+] Uso de tags en una gramática para formatear la entrada del usuario en campos del atributo del formulario
 
 ---- Opcional (seguramente no lo hagamos)
 
 - Hacerlo multilingüe
 - Que se pueda interactuar tanto por texto (teclado) como por voz
-- Que se conecte a una base de datos para hacer la compra de las entradas (<submit>)
+- [+] Que se conecte a una base de datos para hacer la compra de las entradas (<submit>)
