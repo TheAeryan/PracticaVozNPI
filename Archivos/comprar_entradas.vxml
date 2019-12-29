@@ -1,7 +1,7 @@
 <vxml version="2.1" xml:lang="es-ES">
 	<!--Gramática activa en todo el documento para que el usuario pueda pedir ayuda. Se le manda al documento
    info_entradas.vxml-->
-	<link next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/carlos/Archivos/info_entradas.vxml">
+	<link next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/info_entradas.vxml">
 		<!--Le pongo un peso menor para que no se detecte que el usuario ha pedido ayuda cuando en realidad no lo ha hecho-->
 		<grammar weight="0.2" src="gram_ayuda.jsgf"/>
 	</link>
@@ -54,7 +54,7 @@
 					 		<clear namelist="diaVisita"/>
 					 	</if>
 					 <!--Meses con 30 días-->
-					 <elseif cond="diaVisita.mes == 4 || diaVisita.mes == 6 || diaVisita.mes == 9 || diaVisita.mes == 11"/> 
+					 <elseif cond="diaVisita.mes == 4 || diaVisita.mes == 6 || diaVisita.mes == 9 || diaVisita.mes == 11"/>
 					 	<if cond="diaVisita.dia &gt; 30">
 					 		<prompt>Lo sentimos. El mes elegido solo tiene 30 dias.</prompt>
 					 		<!--Se vuelve a pedir el día y el mes-->
@@ -90,8 +90,8 @@
 						<clear namelist="numEntradas"/>
 						<!--Cambio el prompt (uso tapered prompts)-->
 						<assign name="primera_vez" expr="false"/>
-					</if>	
-				</if>	
+					</if>
+				</if>
 			</filled>
 		</field>
 
@@ -139,7 +139,7 @@
 
 			<!--Como la página no devuelve el documento al que realizar la transición (ya que
 		       simplemente queremos terminar la llamada), se produce una excepción error.badfetch-->
-			<catch event="error.badfetch"> 
+			<catch event="error.badfetch">
 		     <!--Termino la llamada-->
 				<disconnect/>
 		   </catch>

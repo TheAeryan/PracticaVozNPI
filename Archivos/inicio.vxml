@@ -6,9 +6,9 @@
 			Bienvenido a nuestro sistema de ayuda a la Alhambra.
 		</prompt>
 		<prompt>Elige una de las siguientes opciones: <enumerate/></prompt>
-			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/carlos/Archivos/entradas.vxml">
+			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/entradas.vxml">
 			Entradas </choice>
-			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/carlos/Archivos/visitas.vxml">
+			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/visitas.vxml">
 			Visitas </choice>
 	</menu>
 </vxml>
