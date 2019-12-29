@@ -1,5 +1,6 @@
 <vxml version="2.1" xml:lang="es-ES">
 	<form id="prueba_submit" scope="document">
+		<var name="datos" expr="17"/>
 		<field name="hacer_submit"> 
 			<grammar src="prueba_gram.jsgf"/>
 		</field>
