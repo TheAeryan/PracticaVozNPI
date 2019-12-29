@@ -2,6 +2,6 @@
 grammar nombre_completo;
 public <nombre_completo> = <nombre> <apellido> <apellido>;
 
-<nombre> = carlos | paula | miguel | pepe | pedro | roberto | maria | marta | fatima;
+<nombre> = Carlos | Paula | Miguel | Pepe | Pedro | Roberto | Maria | Marta | Fatima;
 
-<apellido> = molina | ramirez | garcia | gonzalez | fernandez | rodriguez | lopez | ruiz | diaz | moreno | iglesias;
+<apellido> = Molina | Ramirez | Garcia | Gonzalez | Fernandez | Rodriguez | Lopez | Ruiz | Diaz | Moreno | Iglesias;

@@ -17,11 +17,11 @@
 		<field name="tipoVisita">
 			<!--Le doy al usuario tiempo suficiente para que se piense el tipo de visita que quiere.-->
 			<prompt timeout="30s">Elige el tipo de visita. Ahora mismo, las opciones disponibles son: <enumerate/></prompt>
-			<option value="alhambra general"> alhambra general </option>
-			<option value="nocturna palacios"> nocturna palacios </option>
-			<option value="jardines generalife y alcazaba"> jardines generalife y alcazaba </option>
-			<option value="nocturna jardines y generalife"> nocturna jardines y generalife </option>
-			<option value="alhambra experiencias"> alhambra experiencias </option>
+			<option value="Alhambra General"> alhambra general </option>
+			<option value="Nocturna Palacios"> nocturna palacios </option>
+			<option value="Jardines Generalife y Alcazaba"> jardines generalife y alcazaba </option>
+			<option value="Nocturna Jardines y Generalife"> nocturna jardines y generalife </option>
+			<option value="Alhambra Experiencias"> alhambra experiencias </option>
 
 			<!--Si no estamos seguros de lo que ha dicho el usuario, le volvemos a preguntar-->
 			<filled>
@@ -118,14 +118,16 @@
 
 			<filled>
 				<if cond="validarDatos == 'si'">
-					<!--     Guardo la entrada en la base de datos.
-				       Para ver los elementos de la base de datos, acceder a: http://aeryan.pythonanywhere.com/entradas/-->
-				      <submit next="http://aeryan.pythonanywhere.com:80/submit/" method="post" namelist="tipoVisita diaVisita.dia diaVisita.mes numEntradas nombreyApellidos"/>
 					<prompt>
 						<!--Reproduzco un sonido de caja registradora.-->
 						<audio src="https://wav-sounds.com/wp-content/uploads/2017/09/Various-06.wav"></audio>
-						La compra ha sido realizada.
+						Su compra ha sido realizada.
 					</prompt>
+
+					<!--     Guardo la entrada en la base de datos.
+				       Para ver los elementos de la base de datos, acceder a: http://aeryan.pythonanywhere.com/entradas/-->
+			      <submit next="http://aeryan.pythonanywhere.com:80/submit/" method="post" namelist="tipoVisita diaVisita.dia diaVisita.mes numEntradas nombreyApellidos"/>
+
 					<!--Termino la llamada-->
 					<disconnect/>
 				<else/>
