@@ -16,7 +16,7 @@
     </field>
 
     <block>
-      <if cond="accion == 'mochila'"/>
+      <if cond="accion == 'mochila'">
         <prompt> Se puede llevar mochila </prompt>
       <elseif cond="accion == 'bebe'"/>
         <prompt> Se pueden llevar bebes </prompt>
