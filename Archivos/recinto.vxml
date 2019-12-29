@@ -1,5 +1,29 @@
 <vxml version="2.1" xml:lang="es-ES">
 
+  <property name="confidencelevel" value="0.8"/>
+  <link event="exit"> <grammar src="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/gram_salida.jsgf"/> </link>
+  <form id="form_recinto">
 
+    <catch event="exit">
+			<block>
+				<goto next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/visitas.vxml"/>
+			</block>
+		</catch>
 
+    <field id="accion">
+      <prompt> Como quieres acceder al recinto? </prompt>
+      <grammar src="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/gram_vehiculo.jsgf">
+    </field>
+
+    <block>
+      <if cond="accion == 'pie' "/>
+        <prompt> Se puede acceder a pie yendo por la cuesta de los chinos o por la cuesta de gomerez</prompt>
+      <elseif cond="accion == 'coche' "/>
+        <prompt> Se llega por Ronda Sur hasta el pabellon de acceso donde encontrara un parking </prompt>
+      <elseif cond="accion == 'autobus' "/>
+        <prompt> Puedes tomar el autobus C30 o C32. </prompt>
+      </if>
+      <goto next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/visitas.vxml"/>
+    </block>
+  </form>
 </vxml>
