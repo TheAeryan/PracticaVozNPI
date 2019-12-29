@@ -12,9 +12,6 @@
 		<var name="max_entradas" expr="5"/>
 		<!--Var usada en el campo numEntradas-->
 		<var name="primera_vez" expr="true"/>
-		<!--Var usadas en el campo diaVisita-->
-		<var name="dia_visita"/>
-		<var name="mes_visita"/>
 
 		<!--Tipo de entrada-->
 		<field name="tipoVisita">

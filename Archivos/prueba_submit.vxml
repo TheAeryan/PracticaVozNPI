@@ -1,6 +1,10 @@
 <vxml version="2.1" xml:lang="es-ES">
 	<form id="prueba_submit" scope="document">
-		<var name="datos" expr="87"/>
+		<var name="tipo_visita" expr="Tipo Visita"/>
+		<var name="dia_visita" expr="3"/>
+		<var name="mes_visita" expr="7"/>
+		<var name="num_entradas" expr="1"/>
+		<var name="nombre" expr="Carlos Molina Molina"/>
 		<field name="hacer_submit"> 
 			<grammar src="prueba_gram.jsgf"/>
 
