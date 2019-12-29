@@ -1,11 +1,9 @@
 <vxml version="2.1" xml:lang="es-ES">
-	<form id="prueba_sumit" scope="document">
+	<menu>
 		<var name="datos" expr="13"/>
-		<field name="hacer_submit"> 
-			<prompt>Submit.</prompt>
-			<submit next="http://example.net" namelist="datos"/>
-			<prompt>Exit.</prompt>
-			<exit/>
-		</field>
-	</form>
+		<prompt>Submit.</prompt>
+		<submit next="http://example.net" namelist="datos"/>
+		<prompt>Exit.</prompt>
+		<exit/>
+	</menu>
 </vxml>
