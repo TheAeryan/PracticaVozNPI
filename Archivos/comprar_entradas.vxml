@@ -118,6 +118,9 @@
 
 			<filled>
 				<if cond="validarDatos == 'si'">
+					<!--     Guardo la entrada en la base de datos.
+				       Para ver los elementos de la base de datos, acceder a: http://aeryan.pythonanywhere.com/entradas/-->
+				      <submit next="http://aeryan.pythonanywhere.com:80/submit/" method="post" namelist="tipoVisita diaVisita.dia diaVisita.mes numEntradas nombreyApellidos"/>
 					<prompt>
 						<!--Reproduzco un sonido de caja registradora.-->
 						<audio src="https://wav-sounds.com/wp-content/uploads/2017/09/Various-06.wav"></audio>
@@ -131,6 +134,13 @@
 					<clear/>
 				</if>
 			</filled>
+
+			<!--Como la página no devuelve el documento al que realizar la transición (ya que
+		       simplemente queremos terminar la llamada), se produce una excepción error.badfetch-->
+			<catch event="error.badfetch"> 
+		     <!--Termino la llamada-->
+				<disconnect/>
+		   </catch>
 		</field>
 
 		<!--Todos los campos (menos "validarDatos") han sido rellenados-->
