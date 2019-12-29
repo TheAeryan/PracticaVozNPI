@@ -8,7 +8,7 @@
 			<block>
 				<goto next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/visitas.vxml"/>
 			</block>
-		</catch>-->
+		</catch>
 
     <field name="accion">
       <prompt> Como quieres acceder al recinto? </prompt>
