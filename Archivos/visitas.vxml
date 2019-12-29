@@ -1,7 +1,7 @@
 <vxml version="2.1" xml:lang="es-ES">
 
 	<menu>
-		<prompt bargein="false">
+		<prompt>
 			Informacion sobre las visitas, temas: horario de visitas, acceso al recinto, cosas permitidas, movilidad reducida.
 		</prompt>
 		<prompt>Elige una de las siguientes opciones: </prompt>
