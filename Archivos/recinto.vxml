@@ -12,7 +12,7 @@
 
     <field name="accion">
       <prompt> Como quieres acceder al recinto? </prompt>
-      <grammar src="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/gram_vehiculo.jsgf">
+      <grammar src="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/gram_vehiculo.jsgf"/>
     </field>
 
     <block>
