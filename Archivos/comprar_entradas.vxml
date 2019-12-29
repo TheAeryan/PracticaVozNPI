@@ -149,7 +149,6 @@
 		<filled mode="all" namelist="tipoVisita diaVisita numEntradas nombreyApellidos">
 			<!--Le leo los datos registrados al usuario para que vea si son correctos.-->
 			<prompt>
-					  <!--Reproduzco un sonido de caja registradora.-->
 				     Los datos de la entrada son:
 				     Tipo visita: <value expr="tipoVisita"/>.
 				     Fecha visita: <value expr="diaVisita.dia"/> del <value expr="diaVisita.mes"/>.
