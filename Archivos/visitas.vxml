@@ -1,7 +1,16 @@
 <vxml version="2.1" xml:lang="es-ES">
-	<form id="form_visitas">
-		<block>
-			<prompt>Informacion sobre las visitas.</prompt>
-		</block>
-	</form>
+	<menu>
+		<prompt bargein="false">
+			Informacion sobre las visitas, temas: horario de visitas, acceso al recinto, cosas permitidas, movilidad reducida.
+		</prompt>
+		<prompt>Elige una de las siguientes opciones: <enumerate/></prompt>
+			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/pauike/Archivos/horario.vxml">
+			Horario </choice>
+			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/pauike/Archivos/recinto.vxml">
+			Recinto </choice>
+			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/pauike/Archivos/permitido.vxml">
+			Permitido </choice>ç
+			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/pauike/Archivos/movibilidad.vxml">
+			Movilidad </choice>
+	</menu>
 </vxml>
