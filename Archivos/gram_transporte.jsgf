@@ -1,0 +1,8 @@
+#JSGF V1.0;
+grammar transporte;
+
+public <transporte> = [en | a | con] <vehiculo> {this.vehiculo = $vehiculo};
+
+<vehiculo> = coche {this.$value = "coche"} |
+          pie {this.$value = "pie"} |
+          autobus {this.$value = "autobus"};

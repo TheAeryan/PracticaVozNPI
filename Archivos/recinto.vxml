@@ -10,16 +10,17 @@
 			</block>
 		</catch>
 
-    <field name="accion">
+    <field name="vehiculo">
       <prompt> Como quieres acceder al recinto? </prompt>
-      <grammar src="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/gram_vehiculo.jsgf"/>
+      <grammar src="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/gram_transporte.jsgf"/>
     </field>
+
     <block>
-      <if cond="accion == 'pie'">
+      <if cond="vehiculo == 'pie'">
         <prompt> Se puede acceder a pie yendo por la cuesta de los chinos o por la cuesta de gomerez</prompt>
-      <elseif cond="accion == 'coche'"/>
+      <elseif cond="vehiculo == 'coche'"/>
         <prompt> Se llega por Ronda Sur hasta el pabellon de acceso donde encontrara un parking </prompt>
-      <elseif cond="accion == 'autobus'"/>
+      <elseif cond="vehiculo == 'autobus'"/>
         <prompt> Puedes tomar el autobus C30 o C32. </prompt>
       </if>
       <prompt> Volviendo al menu anterior </prompt>
