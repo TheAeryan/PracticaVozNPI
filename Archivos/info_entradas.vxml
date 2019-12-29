@@ -12,7 +12,7 @@
 
 		<field name="tipo">
       <prompt> Elige entre Alhambra general, visita nocturna palacios o Generalife y Alcazaba </prompt>
-      <grammar src="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/gram_entradas.jsgf"/>
+      <grammar src="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/gram_entradas.jsfg"/>
     </field>
 
 		<block>
