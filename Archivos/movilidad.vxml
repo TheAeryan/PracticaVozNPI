@@ -1,0 +1,8 @@
+<vxml version="2.1" xml:lang="es-ES">
+  <form id="form_movilidad">
+    <block>
+      <prompt> En este momento las personas con discapacidad solo pueden ver el 50 por ciento de la Alhambra aproximadamente, ya que el resto no es accesible todavia. Para ver el 30 por ciento restante, las personas con discapacidad necesitaria la ayuda de otras personas para acceder. </prompt>
+      <goto next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/visitas.vxml"/>
+    </block>
+  </form>
+</vxml>

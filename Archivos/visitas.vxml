@@ -3,7 +3,6 @@
 	<property name="confidencelevel" value="0.8"/>
 	<link event="exit"> <grammar src="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/gram_salida.jsgf"/> </link>
 
-
 	<catch event="exit">
 		<block>
 			<goto next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/inicio.vxml"/>
@@ -14,14 +13,16 @@
 		<prompt bargein="false">
 			Informacion sobre las visitas, temas: horario de visitas, acceso al recinto, cosas permitidas, movilidad reducida.
 		</prompt>
-		<prompt>Elige una de las siguientes opciones: <enumerate/></prompt>
+		<prompt>Elige una de las siguientes opciones: </prompt>
+		<enumerate/>
 			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/horario.vxml">
 			Horario </choice>
 			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/recinto.vxml">
 			Recinto </choice>
 			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/permitido.vxml">
-			Permitido </choice>ç
-			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/movibilidad.vxml">
+			Permitido </choice>
+			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/movilidad.vxml">
 			Movilidad </choice>
+		<enumerate/>
 	</menu>
 </vxml>
