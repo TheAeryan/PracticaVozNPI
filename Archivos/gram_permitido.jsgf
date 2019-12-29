@@ -1,9 +1,9 @@
 #JSGF V1.0;
 grammar info_visita;
 
-public <info_visita> = <puedo> <accion> {this.accion = $accion}
+public <info_visita> = <puedo> <accion> [a la Alhambra] {this.accion = $accion};
 
-<puedo> = [no] se puede | puede | esta (permitido | prohibido) | [no] puedo
+<puedo> = [no] se puede | puede | esta (permitido | prohibido) | [no] puedo;
 
 <accion> = <llevar> (mochila | la mochila) {this.$value = "mochila"} |
           <llevar> [<determinante>] (comida | almuerzo | merienda | bebidas) {this.$value = "comida"} |

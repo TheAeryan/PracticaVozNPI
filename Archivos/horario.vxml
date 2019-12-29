@@ -1,18 +1,16 @@
 <vxml version="2.1" xml:lang="es-ES">
 
+<property name="confidencelevel" value="0.8"/>
 <link event="exit"> <grammar src="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/gram_salida.jsgf"/> </link>
 
-  <form id="form_visitas">
+  <form id="form_horario">
     <grammar src="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/gram_horario.jsgf"/>
     <property name="bargein" value="false"/>
     <catch event="exit">
-      <goto next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/visitas.vxml"/>
+      <block>
+        <goto next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/visitas.vxml"/>
+      </block>
     </catch>
-    <block>
-      <prompt>
-        Información sobre el horario de apertura de la Alhambra.
-      </prompt>
-    </block>
 
     <initial name="prompt_inicial">
       <prompt bargein="true"> Para que dia de que mes deseas saber el horario?</prompt>
@@ -42,6 +40,7 @@
         <else/>
           <prompt bargein="true"> El horario del dia <value expr="dia"/> del mes <value expr="mes"/> es de 9 a 6</prompt>
         </if>
+        <prompt> Volviendo al menu anterior </prompt>
         <goto next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/visitas.vxml"/>
     </block>
   </form>

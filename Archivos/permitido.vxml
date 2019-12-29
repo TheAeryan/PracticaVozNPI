@@ -1,3 +1,24 @@
 <vxml version="2.1" xml:lang="es-ES">
+  <form id="form_permitido">
+    <field id="accion">
+      <prompt> Puedes preguntarme que esta o no permitido, por ejemplo, se puede llevar mochila? </prompt>
+      <grammar src="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/gram_permitido.jsgf">
+    </field>
 
+    <block>
+      <if cond="accion == 'mochila' "/>
+        <prompt> Se puede llevar mochila </prompt>
+      <elseif cond="accion == 'bebe' "/>
+        <prompt> Se pueden llevar bebes </prompt>
+      <elseif cond="accion == 'comida' "/>
+        <prompt> Se puede llevar comida fuera del recinto </prompt>
+      <elseif cond="accion == 'mascota' "/>
+        <prompt> No se pueden traer mascotas dentro del recinto </prompt>
+      <elseif cond="accion == 'tocar' "/>
+        <prompt> No se puede tocar dentro del recinto </prompt>
+      <elseif cond="accion == 'fumar' "/>
+        <prompt> No se puede fumar </prompt>
+      </if>
+    </block>
+  </form>
 </vxml>

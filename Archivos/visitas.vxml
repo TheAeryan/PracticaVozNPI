@@ -1,5 +1,14 @@
 <vxml version="2.1" xml:lang="es-ES">
+
+<property name="confidencelevel" value="0.8"/>
+<link event="exit"> <grammar src="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/gram_salida.jsgf"/> </link>
+
 	<menu>
+		<catch event="exit">
+			<block>
+				<goto next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/inicio.vxml"/>
+			</block>
+		</catch>
 		<prompt bargein="false">
 			Informacion sobre las visitas, temas: horario de visitas, acceso al recinto, cosas permitidas, movilidad reducida.
 		</prompt>
