@@ -1,0 +1,8 @@
+#JSGF V1.0;
+grammar entrada;
+
+public <entrada> = <tipo> {this.tipo = $tipo};
+
+<tipo> = Alcazaba {this.$value = "alcazaba"} |
+          palacios {this.$value = "palacios"} |
+          general {this.$value = "general"};

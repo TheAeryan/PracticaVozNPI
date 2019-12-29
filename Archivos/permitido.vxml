@@ -17,17 +17,17 @@
 
     <block>
       <if cond="accion == 'mochila'">
-        <prompt> Se puede llevar mochila </prompt>
+        <prompt> Se puede llevar mochila. </prompt>
       <elseif cond="accion == 'bebe'"/>
-        <prompt> Se pueden llevar bebes </prompt>
+        <prompt> Se pueden llevar bebes. </prompt>
       <elseif cond="accion == 'comida'"/>
-        <prompt> Se puede llevar comida fuera del recinto </prompt>
+        <prompt> Se puede llevar comida fuera del recinto.</prompt>
       <elseif cond="accion == 'mascota'"/>
-        <prompt> No se pueden traer mascotas dentro del recinto </prompt>
+        <prompt> No se pueden traer mascotas dentro del recinto. </prompt>
       <elseif cond="accion == 'tocar'"/>
-        <prompt> No se puede tocar dentro del recinto </prompt>
+        <prompt> No se puede tocar dentro del recinto. </prompt>
       <elseif cond="accion == 'fumar'"/>
-        <prompt> No se puede fumar </prompt>
+        <prompt> No se puede fumar. </prompt>
       </if>
       <prompt> Volviendo al menu anterior </prompt>
       <goto next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/visitas.vxml"/>

@@ -1,7 +1,30 @@
 <vxml version="2.1" xml:lang="es-ES">
-	<form id="form_entradas">
+
+	<property name="confidencelevel" value="0.8"/>
+	<link event="exit"> <grammar src="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/gram_salida.jsgf"/> </link>
+	<form id="form_recinto">
+
+		<catch event="exit">
+			<block>
+				<goto next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/visitas.vxml"/>
+			</block>
+		</catch>
+
+		<field name="tipo">
+      <prompt> Elige entre Alhambra general, visita nocturna palacios o Generalife y Alcazaba </prompt>
+      <grammar src="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/gram_entradas.jsgf"/>
+    </field>
+
 		<block>
-			<prompt>Informacion sobre las entradas.</prompt>
-		</block>
-	</form>
+      <if cond="tipo == 'alcazaba'">
+        <prompt> Coste de 5 euros. Incluye solo Alcazaba y Generalife.</prompt>
+      <elseif cond="tipo == 'palacios'"/>
+        <prompt> Visita Nocturna a los Palacios. Cuesta 8 euros.</prompt>
+      <elseif cond="tipo == 'general'"/>
+        <prompt>Inluye todo: Alcazaba, Generalife y Palacios. Cuesta 14 euros.</prompt>
+      </if>
+      <prompt> Volviendo al menu anterior </prompt>
+      <goto next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/visitas.vxml"/>
+    </block>
+  </form>
 </vxml>
