@@ -36,11 +36,11 @@
 
     <block>
         <if cond="mes > 4">
-          <prompt bargein="true"> El horario del dia <value expr="dia"/> del mes <value expr="mes"/> es de 9 a 7</prompt>
+          <prompt bargein="true"> El horario del dia <value expr="dia"/> del mes <value expr="mes"/> es de 9 a 7.</prompt>
         <else/>
-          <prompt bargein="true"> El horario del dia <value expr="dia"/> del mes <value expr="mes"/> es de 9 a 6</prompt>
+          <prompt bargein="true"> El horario del dia <value expr="dia"/> del mes <value expr="mes"/> es de 9 a 6.</prompt>
         </if>
-        <prompt> Volviendo al menu anterior </prompt>
+        <prompt> Volviendo al menu anterior.</prompt>
         <goto next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/visitas.vxml"/>
     </block>
   </form>

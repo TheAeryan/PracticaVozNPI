@@ -23,7 +23,7 @@
       <elseif cond="tipo == 'general'"/>
         <prompt>Inluye todo: Alcazaba, Generalife y Palacios. Cuesta 14 euros.</prompt>
       </if>
-      <prompt> Volviendo al menu anterior </prompt>
+      <prompt> Volviendo al menu anterior. </prompt>
       <goto next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/visitas.vxml"/>
     </block>
   </form>
