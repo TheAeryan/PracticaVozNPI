@@ -9,7 +9,7 @@
 			<grammar src="prueba_gram.jsgf"/>
 
 			<filled>
-				<submit next="http://aeryan.pythonanywhere.com:80/submit/" method="post" namelist="datos"/>
+				<submit next="http://aeryan.pythonanywhere.com:80/submit/" method="post" namelist="tipo_visita dia_visita mes_visita num_entradas nombre"/>
 				<prompt>Submit realizado.</prompt>
 			</filled>
 
