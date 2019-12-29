@@ -4,13 +4,13 @@
 			Informacion sobre las visitas, temas: horario de visitas, acceso al recinto, cosas permitidas, movilidad reducida.
 		</prompt>
 		<prompt>Elige una de las siguientes opciones: <enumerate/></prompt>
-			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/pauike/Archivos/horario.vxml">
+			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/horario.vxml">
 			Horario </choice>
-			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/pauike/Archivos/recinto.vxml">
+			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/recinto.vxml">
 			Recinto </choice>
-			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/pauike/Archivos/permitido.vxml">
+			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/permitido.vxml">
 			Permitido </choice>ç
-			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/pauike/Archivos/movibilidad.vxml">
+			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/movibilidad.vxml">
 			Movilidad </choice>
 	</menu>
 </vxml>

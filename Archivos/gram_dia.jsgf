@@ -1,0 +1,37 @@
+#JSGF V1.0;
+grammar dia;
+
+public <dia> = uno {this.$value="1"} |
+		 una {this.$value="1"} |
+		 primero {this.$value="1"} |
+		 primera {this.$value="1"} |
+		 dos {this.$value="2"} |
+		 tres {this.$value="3"} |
+		 cuatro {this.$value="4"} |
+		 cinco {this.$value="5"} |
+		 seis {this.$value="6"} |
+		 siete {this.$value="7"} |
+		 ocho {this.$value="8"} |
+		 nueve {this.$value="9"} |
+		 diez {this.$value="10"} |
+		 once {this.$value="11"} |
+		 doce {this.$value="12"} |
+		 trece {this.$value="13"} |
+		 catorce {this.$value="14"} |
+		 quince {this.$value="15"} |
+		 dieciseis {this.$value="16"} |
+		 diecisiete {this.$value="17"} |
+		 dieciocho {this.$value="18"} |
+		 diecinueve {this.$value="19"} |
+		 veinte {this.$value="20"} |
+		 veintiuno {this.$value="21"} |
+		 veintidos {this.$value="22"} |
+		 veintitres {this.$value="23"} |
+		 veinticuatro {this.$value="24"} |
+		 veinticinco {this.$value="25"} |
+		 veintiseis {this.$value="26"} |
+		 veintisiete {this.$value="27"} |
+		 veintiocho {this.$value="28"} |
+		 veintinueve {this.$value="29"} |
+		 treinta {this.$value="30"} |
+		 treinta y uno {this.$value="31"} ;
