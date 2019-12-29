@@ -1,0 +1,15 @@
+#JSGF V1.0;
+grammar mes;
+
+public <mes> = (enero | uno) {this.$value="1"} |
+		(febrero | dos) {this.$value="2"} |
+		(marzo | tres) {this.$value="3"} |
+		(abril | cuatro) {this.$value="4"} |
+		(mayo | cinco) {this.$value="5"} |
+		(junio | seis) {this.$value="6"} |
+		(julio | siete) {this.$value="7"} |
+		(agosto | ocho) {this.$value="8"} |
+		(septiembre | nueve) {this.$value="9"} |
+		(octubre | diez) {this.$value="10"} |
+		(noviembre | once) {this.$value="11"} |
+		(diciembre | doce) {this.$value="12"} ;

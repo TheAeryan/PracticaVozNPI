@@ -1,0 +1,48 @@
+<vxml version="2.1" xml:lang="es-ES">
+
+<link event="exit"> <grammar src="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/gram_salida.jsgf"/> </link>
+
+  <form id="form_visitas">
+    <grammar src="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/gram_horario.jsgf"/>
+    <property name="bargein" value="false"/>
+    <catch event="exit">
+      <goto next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/visitas.vxml"/>
+    </catch>
+    <block>
+      <prompt>
+        Información sobre el horario de apertura de la Alhambra.
+      </prompt>
+    </block>
+
+    <initial name="prompt_inicial">
+      <prompt bargein="true"> Para que dia de que mes deseas saber el horario?</prompt>
+      <nomatch count="1">
+        Por ejemplo, del mes tres de enero.
+      </nomatch>
+      <nomatch count="3">
+        Lo siento no te entiendo bien, voy a solicitar la informacion por partes.
+        <assign name="prompt_inicial" expr="true"/>
+        <reprompt/>
+      </nomatch>
+    </initial>
+
+    <field name="dia">
+      <prompt> Dime el dia, por ejemplo uno.</prompt>
+      <grammar src="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/gram_dia.jsgf"/>
+    </field>
+
+    <field name="mes">
+      <prompt> Dime el mes, por ejemplo enero. </prompt>
+      <grammar src="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/gram_mes.jsgf"/>
+    </field>
+
+    <block>
+        <if cond="mes > 4">
+          <prompt bargein="true"> El horario del dia <value expr="dia"/> del mes <value expr="mes"/> es de 9 a 7</prompt>
+        <else/>
+          <prompt bargein="true"> El horario del dia <value expr="dia"/> del mes <value expr="mes"/> es de 9 a 6</prompt>
+        </if>
+        <goto next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/visitas.vxml"/>
+    </block>
+  </form>
+</vxml>
