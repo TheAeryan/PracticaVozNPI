@@ -8,6 +8,10 @@
 				<submit next="http://aeryan.pythonanywhere.com/submit" method="post" namelist="datos"/>
 				<prompt>Submit realizado.</prompt>
 			</filled>
+
+			<catch event="error.badfetch"> 
+		     <prompt>Badfetch producido</prompt> 
+		   </catch> 
 		</field>
 	</form>
 </vxml> 
