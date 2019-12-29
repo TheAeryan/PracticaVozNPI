@@ -15,7 +15,7 @@
 			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/movilidad.vxml">
 			Movilidad </choice>
 			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/info_entradas.vxml">
-			Informacion Entradas </choice>
+			Entradas </choice>
 		<enumerate/>
 	</menu>
 </vxml>
