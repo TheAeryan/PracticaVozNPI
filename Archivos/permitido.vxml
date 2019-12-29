@@ -10,7 +10,7 @@
       </block>
     </catch>
 
-    <field id="accion">
+    <field name="accion">
       <prompt> Puedes preguntarme que esta o no permitido, por ejemplo, se puede llevar mochila? </prompt>
       <grammar src="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/gram_permitido.jsgf">
     </field>
