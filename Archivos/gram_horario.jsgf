@@ -1,7 +1,7 @@
 #JSGF V1.0;
 grammar fecha_visita;
-public <fecha_visita> = ([<deseo> saber] [el horario] (del | el) [dia] <dia> [de | del mes de | del mes] <mes>) {this.dia=$dia; this.mes=$mes} |
-											 ([<deseo> saber] [el horario] (del | el) [mes | mes de] <mes> [del dia | de | el] <dia>) {this.dia=$dia; this.mes=$mes};
+public <fecha_visita> = ([<deseo> saber] [el horario] [para] (del | el) [dia] <dia> [de | del mes de | del mes] <mes>) {this.dia=$dia; this.mes=$mes} |
+											 ([<deseo> saber] [el horario] [para] (del | el) [mes | mes de] <mes> [del dia | de | el] <dia>) {this.dia=$dia; this.mes=$mes};
 <deseo> = quiero | querria | me gustaria;
 
 <dia> =  uno {this.$value="1"} |

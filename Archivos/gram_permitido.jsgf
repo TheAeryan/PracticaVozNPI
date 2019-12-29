@@ -1,7 +1,7 @@
 #JSGF V1.0;
-grammar info_visita;
+grammar permitido;
 
-public <info_visita> = <puedo> <accion> [a la Alhambra] {this.accion = $accion};
+public <permitido> = <puedo> <accion> [a la Alhambra] {this.accion = $accion};
 
 <puedo> = [no] se puede | puede | esta (permitido | prohibido) | [no] puedo;
 

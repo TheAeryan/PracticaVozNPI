@@ -1,9 +1,9 @@
 <vxml version="2.1" xml:lang="es-ES">
+
   <property name="confidencelevel" value="0.8"/>
   <link event="exit"> <grammar src="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/gram_salida.jsgf"/> </link>
 
   <form id="form_permitido">
-
     <catch event="exit">
       <block>
         <goto next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/visitas.vxml"/>
