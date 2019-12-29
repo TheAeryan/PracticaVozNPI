@@ -1,8 +1,8 @@
 <vxml version="2.1" xml:lang="es-ES">
-	<form id="prueba_sumit" scope="document">
+	<form id="prueba_submit" scope="document">
 		<var name="datos" expr="13"/>
 		<field name="hacer_submit"> 
-			<grammar>submit | si</grammar>
+			<grammar src="prueba_gram.jsgf"/>
 
 			<filled>
 				<prompt>Submit.</prompt>
