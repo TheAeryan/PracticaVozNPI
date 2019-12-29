@@ -1,28 +1,159 @@
 <vxml version="2.1" xml:lang="es-ES">
-	<!--NO FUNCIONA POR AHORA-->
+	<!--Gramática activa en todo el documento para que el usuario pueda pedir ayuda. Se le manda al documento
+   info_entradas.vxml-->
+	<link next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/carlos/Archivos/info_entradas.vxml">
+		<!--Le pongo un peso menor para que no se detecte que el usuario ha pedido ayuda cuando en realidad no lo ha hecho-->
+		<grammar weight="0.2" src="gram_ayuda.jsgf"/>
+	</link>
+
 	<form id="comprar_entradas" scope="dialog">
+		<!--"confidence" mínima para que un campo se acepte como válido-->
+		<var name="min_conf" expr="0.6"/>
+		<var name="max_entradas" expr="5"/>
+		<!--Var usada en el campo numEntradas-->
+		<var name="primera_vez" expr="true"/>
+
+		<!--Tipo de entrada-->
 		<field name="tipoVisita">
-			<prompt>Cual es el tipo de visita que quieres realizar?</prompt>
-			<grammar src="gram_tipos_visitas.jsgf"/>
+			<!--Le doy al usuario tiempo suficiente para que se piense el tipo de visita que quiere.-->
+			<prompt timeout="30s">Elige el tipo de visita. Ahora mismo, las opciones disponibles son: <enumerate/></prompt>
+			<option value="Alhambra General"> alhambra general </option>
+			<option value="Nocturna Palacios"> nocturna palacios </option>
+			<option value="Jardines Generalife y Alcazaba"> jardines generalife y alcazaba </option>
+			<option value="Nocturna Jardines y Generalife"> nocturna jardines y generalife </option>
+			<option value="Alhambra Experiencias"> alhambra experiencias </option>
+
+			<!--Si no estamos seguros de lo que ha dicho el usuario, le volvemos a preguntar-->
+			<filled>
+				<if cond="tipoVisita$.confidence &lt; min_conf">
+					<clear namelist="tipoVisita"/>
+					<throw event="nomatch"/>
+				</if>
+			</filled>
 		</field>
+
+		<!--Fecha de la visita-->
 		<field name="diaVisita">
-			<prompt>Para que dia y mes quieres la visita?</prompt>
+			<prompt timeout="15s">Para que dia y mes quieres la visita?</prompt>
 			<grammar src="gram_fecha_visita.jsgf"/>
+
+			<filled>
+			 	<!--Si no estamos seguros de lo que ha dicho el usuario, le volvemos a preguntar-->
+				<if cond="diaVisita$.confidence &lt; min_conf">
+					<clear namelist="diaVisita"/>
+					<throw event="nomatch"/>
+				<else/>
+					<!--Miro si el día es válido para el mes (del año 2020) que ha introducido el usuario (por
+				 	ejemplo, febrero solo tiene 29 días).-->
+
+				 	 <!--Febrero (solo 29 días)-->
+					 <if cond="diaVisita.mes == 2">
+					 	<if cond="diaVisita.dia &gt; 29">
+					 		<prompt>Lo sentimos. El mes elegido solo tiene 29 dias.</prompt>
+					 		<!--Se vuelve a pedir el día y el mes-->
+					 		<clear namelist="diaVisita"/>
+					 	</if>
+					 <!--Meses con 30 días-->
+					 <elseif cond="diaVisita.mes == 4 || diaVisita.mes == 6 || diaVisita.mes == 9 || diaVisita.mes == 11"/> 
+					 	<if cond="diaVisita.dia &gt; 30">
+					 		<prompt>Lo sentimos. El mes elegido solo tiene 30 dias.</prompt>
+					 		<!--Se vuelve a pedir el día y el mes-->
+					 		<clear namelist="diaVisita"/>
+					 	</if>
+					 <!--Meses con 31 días: no hago nada-->
+					 </if>
+				</if>
+			</filled>
 		</field>
+
+		<!--Número de entradas-->
 		<field name="numEntradas">
-			<prompt>Cuantas entradas quiere comprar?</prompt>
+			<prompt count="1" timeout="15s" cond="primera_vez == true">Diga cuantas entradas quiere comprar o introduzca un numero de un digito en el teclado.</prompt>
+			<prompt timeout="5s" cond="primera_vez == false">Vuelva a introducir el numero de entradas.</prompt>
+			<prompt count="2" timeout="5s">Vuelva a introducir el numero de entradas.</prompt>
+
+			<!--Gramática "normal" para introducir el número con el habla-->
 			<grammar src="gram_numeros.jsgf"/>
+			<!--Gramática dtmf para introducir el número por teclado-->
+			<grammar mode="dtmf" src="gram_numeros_dtmf.jsgf"/>
+
+			<filled>
+				<!--Si no estamos seguros de lo que ha dicho el usuario, le volvemos a preguntar-->
+				<if cond="numEntradas$.confidence &lt; min_conf">
+					<clear namelist="numEntradas"/>
+					<throw event="nomatch"/>
+				<else/>
+					<!--El usuario no puede comprar más de "max_entradas" entradas-->
+					<if cond="numEntradas &gt; max_entradas">
+						<prompt>No puedes comprar mas de <emphasis><value expr="max_entradas"/></emphasis> entradas.</prompt>
+						<!--Vuelvo a pedir el número de entradas-->
+						<clear namelist="numEntradas"/>
+						<!--Cambio el prompt (uso tapered prompts)-->
+						<assign name="primera_vez" expr="false"/>
+					</if>	
+				</if>	
+			</filled>
 		</field>
+
+		<!--Nombre completo del comprador-->
 		<field name="nombreyApellidos">
-			<prompt>Diga su nombre y apellidos. </prompt>
+			<prompt timeout="15s">Diga su nombre y apellidos. </prompt>
 			<grammar src="gram_nombres_y_apellidos.jsgf"/>
+
+			<!--Si no estamos seguros de lo que ha dicho el usuario, le volvemos a preguntar-->
+			<filled>
+				<if cond="nombreyApellidos$.confidence &lt; min_conf">
+					<clear namelist="nombreyApellidos"/>
+					<throw event="nomatch"/>
+				</if>
+			</filled>
 		</field>
-		<filled mode="all">
-			<prompt>Entrada comprada.
-				     Tipo visita <value expr="tipoVisita"/>.
-				     Dia visita <value expr="diaVisita"/>.
-				     Numero de entradas <value expr="numEntradas"/>.
-				     Nombre completo <value expr="nombreyApellidos"/>.
+
+		<!--Se activa cuando el resto de campos han sido rellenados y tras haberse
+	    ejecutado <filled>-->
+		<field name="validarDatos">
+			<prompt timeout="5s">Estos datos son correctos?</prompt>
+
+			<grammar src="gram_si_no.jsgf"/>
+
+			<filled>
+				<if cond="validarDatos == 'si'">
+					<prompt>
+						<!--Reproduzco un sonido de caja registradora.-->
+						<audio src="https://wav-sounds.com/wp-content/uploads/2017/09/Various-06.wav"></audio>
+						Su compra ha sido realizada.
+					</prompt>
+
+					<!--     Guardo la entrada en la base de datos.
+				       Para ver los elementos de la base de datos, acceder a: http://aeryan.pythonanywhere.com/entradas/-->
+			      <submit next="http://aeryan.pythonanywhere.com:80/submit/" method="post" namelist="tipoVisita diaVisita.dia diaVisita.mes numEntradas nombreyApellidos"/>
+
+					<!--Termino la llamada-->
+					<disconnect/>
+				<else/>
+					<prompt>Por favor, vuelva a proporcionar los datos.</prompt>
+					<!--Borro todos los campos del formulario-->
+					<clear/>
+				</if>
+			</filled>
+
+			<!--Como la página no devuelve el documento al que realizar la transición (ya que
+		       simplemente queremos terminar la llamada), se produce una excepción error.badfetch-->
+			<catch event="error.badfetch"> 
+		     <!--Termino la llamada-->
+				<disconnect/>
+		   </catch>
+		</field>
+
+		<!--Todos los campos (menos "validarDatos") han sido rellenados-->
+		<filled mode="all" namelist="tipoVisita diaVisita numEntradas nombreyApellidos">
+			<!--Le leo los datos registrados al usuario para que vea si son correctos.-->
+			<prompt>
+				     Los datos de la entrada son:
+				     Tipo visita: <value expr="tipoVisita"/>.
+				     Fecha visita: <value expr="diaVisita.dia"/> del <value expr="diaVisita.mes"/>.
+				     Numero de entradas: <value expr="numEntradas"/>.
+				     Nombre completo: <value expr="nombreyApellidos"/>.
 			</prompt>
 		</filled>
 	</form>

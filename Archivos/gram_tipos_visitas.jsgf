@@ -1,7 +1,0 @@
-#JSGF V1.0;
-grammar gram_tipos_visitas;
-public <tipos_visitas> = alhambra general |
-						 nocturna palacios |
-						 jardines generalife y alcazaba |
-						 nocturna jardines y generalife |
-						 alhambra experiencias;

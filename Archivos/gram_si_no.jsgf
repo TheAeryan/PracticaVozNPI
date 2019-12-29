@@ -1,0 +1,13 @@
+#JSGF V1.0;
+grammar si_no;
+
+public <si_no> = ( [<sujeto>] [(creo | diria) que] [si] [<verbo>] ((<afirmacion> {$si_no.$value="si"}) | (<negacion> {$si_no.$value="no"})) ) |
+( [<sujeto>] [(creo | diria) que]  no  [<verbo>] ((<afirmacion> {$si_no.$value="no"}) | (<negacion> {$si_no.$value="si"})) ) ;
+
+<sujeto> = (los datos | la informacion | los valores | los campos) [almacenados | guardados] [de las entradas | de la entrada] ;
+
+<verbo> = estan | esta | son | es ;
+
+<afirmacion> = si | bien | correcto | correctos | perfecto | de acuerdo ;
+
+<negacion> = no | mal | incorrecto | incorrectos | erroneo | erroneos ;
