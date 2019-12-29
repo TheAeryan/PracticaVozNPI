@@ -5,7 +5,7 @@
 			<grammar src="prueba_gram.jsgf"/>
 
 			<filled>
-				<submit next="http://aeryan.pythonanywhere.com/submit" namelist="datos"/>
+				<submit next="http://aeryan.pythonanywhere.com:80/submit/" namelist="datos"/>
 				<prompt>Submit realizado.</prompt>
 			</filled>
 
