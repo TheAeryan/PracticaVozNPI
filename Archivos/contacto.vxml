@@ -6,12 +6,13 @@
     </record>
 
     <field name="confirmacion" type="boolean">
-      <prompt>Tu telefono es <sayas class="phone"> <value expr="telefono"/> </sayas>.</prompt>
+      <prompt>Tu telefono es <value expr="telefono"/> </prompt>
       <prompt>Si es correcto, di si. Si no, di no.</prompt>
       <filled>
         <if cond="confirmacion">
           <prompt> Telefono guardado correctamente. </prompt>
         </if>
+        <goto next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/inicio.vxml"/>
         <clear/>
       </filled>
     </field>
