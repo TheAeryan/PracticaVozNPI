@@ -1,7 +1,7 @@
 <vxml version="2.1" xml:lang="es-ES">
   <form>
     <record name="telefono" beep="true" maxtime="10s" finalsilence="2000ms" dtmfterm="true" type="audio/wav">
-      <prompt>Si necesitas atencion personalizada dejanos tu telefono despues de escuchar el tono.</prompt>
+      <prompt>Si necesitas atencion personalizada. dejanos tu telefono despues de escuchar el tono.</prompt>
       <noinput>No he escuchado nada, prueba otra vez.</noinput>
     </record>
 
@@ -12,6 +12,7 @@
         <if cond="confirmacion">
           <prompt> Telefono guardado correctamente. </prompt>
         </if>
+        <prompt> Tambien puedes llamar a nuestro numero de telefono <sayas class"phone"> 958-027-971 </sayas> </prompt>
         <goto next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/inicio.vxml"/>
         <clear/>
       </filled>
