@@ -13,8 +13,8 @@
           <prompt> Telefono guardado correctamente. </prompt>
         </if>
         <prompt> Tambien puedes llamar a nuestro numero de telefono <sayas class="phone"> 958-027-971 </sayas> </prompt>
-        <goto next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/inicio.vxml"/>
         <clear/>
+        <goto next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/inicio.vxml"/>
       </filled>
     </field>
   </form>
