@@ -10,5 +10,7 @@
 			Entradas </choice>
 			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/visitas.vxml">
 			Visitas </choice>
+			<choice next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/contacto.vxml">
+			Contacto </choice>
 	</menu>
 </vxml>
