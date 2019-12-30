@@ -1,7 +1,7 @@
 #JSGF V1.0;
 grammar entrada;
 
-public <entrada> = [quiero | deseo | me gustaria] [saber] [informacion | mas] [sobre | de] [la] [entrada] [de] [tipo] [visita a] <tipo> {this.tipo = $tipo};
+public <entrada> = [quiero | deseo | me gustaria] [saber] [informacion | mas] [sobre | de] [la] [entrada] [de] [tipo] [visita a | visita] <tipo> {this.tipo = $tipo};
 
 <tipo> = [nocturna] palacios [nocturna] {this.$value = "noc_palacios"} |
           alhambra general {this.$value = "general"} |

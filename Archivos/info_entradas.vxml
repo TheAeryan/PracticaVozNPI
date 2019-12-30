@@ -11,7 +11,7 @@
 		</catch>
 
 		<field name="tipo">
-      <prompt> Elige entre: Alhambra general, visita nocturna palacios o Generalife y Alcazaba </prompt>
+      <prompt> Podrá solicitar información sobre los distintos tipos: Alhambra general, visita jardines generalife y alcazaba, visita nocturna palacios, visita nocturna jardines y generalife, Alhambra experiencias. </prompt>
       <grammar src="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/gram_entradas.jsgf"/>
     </field>
 
