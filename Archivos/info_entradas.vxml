@@ -11,17 +11,21 @@
 		</catch>
 
 		<field name="tipo">
-      <prompt> Elige entre Alhambra general, visita nocturna palacios o Generalife y Alcazaba </prompt>
+      <prompt> Elige entre: Alhambra general, visita nocturna palacios o Generalife y Alcazaba </prompt>
       <grammar src="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/gram_entradas.jsgf"/>
     </field>
 
 		<block>
-      <if cond="tipo == 'alcazaba'">
+      <if cond="tipo == 'jardines'">
         <prompt> Coste de 5 euros. Incluye solo Alcazaba y Generalife.</prompt>
-      <elseif cond="tipo == 'palacios'"/>
+      <elseif cond="tipo == 'noc_palacios'"/>
         <prompt> Visita Nocturna a los Palacios. Cuesta 8 euros.</prompt>
       <elseif cond="tipo == 'general'"/>
-        <prompt>Inluye todo: Alcazaba, Generalife y Palacios. Cuesta 14 euros.</prompt>
+        <prompt>Incluye todo: Alcazaba, Generalife y Palacios. Cuesta 14 euros.</prompt>
+			<elseif cond="tipo == 'noc_jardines'"/>
+				<prompt> Visita de los jardines del Generalife. Coste de 5 euros disponible en los meses de verano.</prompt>
+			<elseif cond="tipo == 'experiencias'"/>
+				<prompt>Coste de 14 euros. Descubre la Alhambra de forma completa: incluye Palacios Nazaries iluminados, visita diurna a la Alcazaba, visita a los jardines y al palacio del Generalife</prompt>
       </if>
       <prompt> Volviendo al menu anterior. </prompt>
       <goto next="https://raw.githubusercontent.com/TheAeryan/PracticaVozNPI/master/Archivos/visitas.vxml"/>

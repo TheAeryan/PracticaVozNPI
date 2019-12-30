@@ -1,8 +1,8 @@
 #JSGF V1.0;
 grammar transporte;
 
-public <transporte> = [en | a | con] <vehiculo> {this.vehiculo = $vehiculo};
+public <transporte> = [voy a ir | voy ] [en | a | con] <vehiculo> {this.vehiculo = $vehiculo};
 
-<vehiculo> = coche {this.$value = "coche"} |
-          pie {this.$value = "pie"} |
-          autobus {this.$value = "autobus"};
+<vehiculo> = (automovil | moto | coche) {this.$value = "coche"} |
+          (pie | andando | andar) {this.$value = "pie"} |
+          (bus | transporte publico | autobus) {this.$value = "autobus"};

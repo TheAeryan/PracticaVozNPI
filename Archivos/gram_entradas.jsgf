@@ -1,8 +1,11 @@
 #JSGF V1.0;
 grammar entrada;
 
-public <entrada> = <tipo> {this.tipo = $tipo};
+public <entrada> = [quiero | deseo | me gustaria] [saber] [informacion | mas] [sobre | de] [la] [entrada] [de] [tipo] [visita a] <tipo> {this.tipo = $tipo};
 
-<tipo> = Alcazaba {this.$value = "alcazaba"} |
-          palacios {this.$value = "palacios"} |
-          general {this.$value = "general"};
+<tipo> = [nocturna] palacios [nocturna] {this.$value = "noc_palacios"} |
+          alhambra general {this.$value = "general"} |
+          jardines [y] generalife [y] Alcazaba {this.$value = "jardines"}
+          [alhambra] experiencias {this.$value = "experiencias"} |
+          nocturna jardines [y] [generalife] {this.$value = "noc_jardines"} |
+          jardines [y] generalife nocturna {this.$value = "noc_jardines"};
